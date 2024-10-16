@@ -49,7 +49,7 @@ const Hero = () => {
   return (
     <div className="px-6">
       <div className="bg-slate-500 rounded-[3rem] h-full relative group overflow-hidden container mx-auto">
-        <video ref={videoRef} className="w-full">
+        <video ref={videoRef} className="w-full" loop>
           <source src="/assets/video/hero_video.mp4" type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
