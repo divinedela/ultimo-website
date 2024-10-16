@@ -25,11 +25,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="container mx-auto pt-4 pb-[3rem] md:px-20 space-y-4">
-      <Image src={Logo} alt="logo" />
-      <div className="flex justify-between items-center text-[#28382B]">
+    <footer className="container mx-auto pt-4 pb-[3rem] md:px-20 px-4 space-y-4">
+      <Image priority={true}  src={Logo} alt="logo" />
+      <div className="flex flex-col lg:flex-row justify-between gap-[1rem] lg:items-center text-[#28382B]">
         <p>© Ultimo Gardens, 2024 All Rights Reserved</p>
-        <ul className="flex gap-6 items-center">
+        <ul className="flex gap-6 flex-wrap items-center">
           {navList.map((navItem, i) => (
             <li key={i}>
               <a href={navItem.link}>{navItem.name}</a>

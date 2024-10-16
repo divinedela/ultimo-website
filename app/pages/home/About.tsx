@@ -5,7 +5,7 @@ import ImageLike from "../../../public/assets/img/home_about.jpeg";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-2 gap-[1rem] py-[6.5rem] container mx-auto  md:px-20">
+    <div className="grid md:grid-cols-2 gap-[1rem] py-[6.5rem] container mx-auto  md:px-20 px-4">
       <div className=" space-y-4">
         <h3 className="text-[#28382B] text-[1rem] font-[700]">
           About Ultimo Gardens
@@ -27,6 +27,7 @@ const About = () => {
       </div>
       <div className=" flex justify-end">
         <Image
+          priority={true}
           src={ImageLike}
           className="h-full max-h-[26rem] object-cover rounded-[1.3rem]"
           alt=""

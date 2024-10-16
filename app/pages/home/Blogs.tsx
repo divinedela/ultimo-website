@@ -7,8 +7,8 @@ import UltimoGardens from "../../../public/assets/img/Ultimo-Gardens.jpeg";
 
 const Blogs = () => {
   return (
-    <div className="container mx-auto  md:px-20 py-20">
-      <div className="grid gap-[1rem] grid-cols-2">
+    <div className="container mx-auto  md:px-20 py-20 px-4">
+      <div className="grid gap-[1rem] lg:grid-cols-2">
         <div className=" space-y-4">
           <h3 className="text-[#28382B] text-[1rem] font-[700]">Blog</h3>
           <h3 className="text-[2rem] italic font-[700]">
@@ -22,7 +22,7 @@ const Blogs = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-[1.5rem] mt-[3rem]">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] mt-[3rem]">
         <CustomBlogCard
           image={FutureOfGreenLiving}
           title="The Future of Green Living: Solar Power in Real Estate"
@@ -54,6 +54,7 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
     <div className="border-[0.5px] border-[#CFCFCF] p-6 rounded-[1.3rem] flex flex-col gap-[1rem]">
       <Image
         src={image}
+        priority={true}
         alt=""
         className="h-full max-h-[12rem] object-cover rounded-xl"
       />

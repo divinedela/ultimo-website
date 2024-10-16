@@ -9,8 +9,8 @@ import SolarPower from "../../../public/assets/img/Solar_Power-Generation.jpeg";
 const Featured = () => {
   return (
     <div className="bg-[#F6F4ED] rounded-t-[3rem] py-20">
-      <div className="container mx-auto  md:px-20">
-        <div className="grid gap-[1rem] grid-cols-2">
+      <div className="container mx-auto  md:px-20 px-4">
+        <div className="grid gap-[1rem] lg:grid-cols-2">
           <div className=" space-y-4">
             <h3 className="text-[#28382B] text-[1rem] font-[700]">
               Featured Facilities
@@ -31,7 +31,7 @@ const Featured = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-[1.5rem] mt-[3rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] mt-[3rem]">
           <CustomImageCard
             title="Modern Fitness Center"
             span={2}
@@ -71,10 +71,15 @@ export const CustomImageCard: React.FC<CustomImageCardProps> = ({
   return (
     <div
       className="bg-white p-6 rounded-[1.3rem] flex flex-col gap-[1rem]"
-      style={{ gridColumn: `span ${span} / span ${span}` }}
+      style={{
+        gridColumn: `span ${window?.innerWidth > 768 ? span : 1} / span ${
+          window?.innerWidth > 768 ? span : 1
+        }`,
+      }}
     >
       <h3 className="text-[#28382B] text-xl font-[700]">{title}</h3>
       <Image
+        priority={true}
         src={image}
         alt=""
         className="h-full max-h-[21rem] object-cover rounded-xl"

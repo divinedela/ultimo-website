@@ -23,13 +23,12 @@ const Header = () => {
 
       <nav className="hidden md:flex space-x-8">
         {navList.map((navItem, i) => (
-          <div className="flex flex-col items-center">
+          <div key={i} className="flex flex-col items-center">
             <a
               onClick={() => {
                 setActive(true);
                 setIndex(i);
               }}
-              key={i}
               href={navItem.link}
               className={`hover:text-gray-800 text-[#28382B] ${
                 active && index === i ? "text-gray-600" : ""
