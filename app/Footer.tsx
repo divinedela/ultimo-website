@@ -29,7 +29,7 @@ const Footer = () => {
       <Image priority={true}  src={Logo} alt="logo" />
       <div className="flex flex-col lg:flex-row justify-between gap-[1rem] lg:items-center text-[#28382B]">
         <p>© Ultimo Gardens, 2024 All Rights Reserved</p>
-        <ul className="flex gap-6 flex-wrap items-center">
+        <ul className="flex gap-x-6 gap-y-1 flex-wrap items-center">
           {navList.map((navItem, i) => (
             <li key={i}>
               <a href={navItem.link}>{navItem.name}</a>
