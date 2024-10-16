@@ -1,7 +1,7 @@
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Image from "next/image";
-import ImageLike from "../../../public/assets/img/home_about.jpeg";
+import ImageLike from "../../public/assets/img/home_about.jpeg";
 
 const About = () => {
   return (

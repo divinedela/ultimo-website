@@ -1,9 +1,9 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import FutureOfGreenLiving from "../../../public/assets/img/Future_of_Green-Living.jpeg";
-import HomeTips from "../../../public/assets/img/Tips_for_Sustainable-Home.png";
-import UltimoGardens from "../../../public/assets/img/Ultimo-Gardens.jpeg";
+import FutureOfGreenLiving from "../../public/assets/img/Future_of_Green-Living.jpeg";
+import HomeTips from "../../public/assets/img/Tips_for_Sustainable-Home.png";
+import UltimoGardens from "../../public/assets/img/Ultimo-Gardens.jpeg";
 
 const Blogs = () => {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Image, { StaticImageData } from "next/image";
-import FitnessCenter from "../../../public/assets/img/Modern_Fitness-Center.jpeg";
-import ElectricVehicle from "../../../public/assets/img/Electric_vehicle_charging-ports.jpeg";
-import InverterACs from "../../../public/assets/img/Inverter_ACs_and_LED-bulbs.jpeg";
-import SolarPower from "../../../public/assets/img/Solar_Power-Generation.jpeg";
+import FitnessCenter from "../../public/assets/img/Modern_Fitness-Center.jpeg";
+import ElectricVehicle from "../../public/assets/img/Electric_vehicle_charging-ports.jpeg";
+import InverterACs from "../../public/assets/img/Inverter_ACs_and_LED-bulbs.jpeg";
+import SolarPower from "../../public/assets/img/Solar_Power-Generation.jpeg";
 
 const Featured = () => {
   return (

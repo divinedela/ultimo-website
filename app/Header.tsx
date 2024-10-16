@@ -1,15 +1,17 @@
 "use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 
 const Header = () => {
-  const [active, setActive] = useState(true);
-  const [index, setIndex] = useState(0);
+  const currentPath = usePathname()
 
   const navList = [
-    { name: "Home", link: "#" },
+    { name: "Home", link: "/" },
     { name: "The Project", link: "#" },
-    { name: "About Us", link: "#" },
+    { name: "About Us", link: "/about" },
     { name: "Gallery", link: "#" },
     { name: "Blog", link: "#" },
     { name: "Contact Us", link: "#" },
@@ -24,20 +26,16 @@ const Header = () => {
       <nav className="hidden md:flex space-x-8">
         {navList.map((navItem, i) => (
           <div key={i} className="flex flex-col items-center">
-            <a
-              onClick={() => {
-                setActive(true);
-                setIndex(i);
-              }}
+            <Link
               href={navItem.link}
               className={`hover:text-gray-800 text-[#28382B] ${
-                active && index === i ? "text-gray-600" : ""
+                currentPath === navItem.link ? "text-gray-600" : ""
               } `}
             >
               {navItem.name}
-            </a>
+            </Link>
             <p className="text-[#D6AB11]">
-              {active && index === i && <GoDotFill size={20} />}
+              {currentPath === navItem.link && <GoDotFill size={20} />}
             </p>
           </div>
         ))}
