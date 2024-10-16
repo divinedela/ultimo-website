@@ -31,24 +31,26 @@ const Featured = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] mt-[3rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[1.5rem] mt-[3rem]">
           <CustomImageCard
             title="Modern Fitness Center"
-            span={2}
+            span={3}
             image={FitnessCenter}
           />
           <CustomImageCard
             image={ElectricVehicle}
             title="Electric vehicle charging ports"
+            span={2}
           />
           <CustomImageCard
             image={InverterACs}
             title="Inverter ACs and LED bulbs "
+            span={2}
           />
           <CustomImageCard
             image={SolarPower}
             title="Solar Power Generation"
-            span={2}
+            span={3}
           />
         </div>
       </div>
