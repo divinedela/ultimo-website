@@ -1,16 +1,16 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import ImageLike from "../../public/assets/img/home_about.jpeg";
+import ImageLike from "../../public/assets/img/form-bg.jpeg";
 
 const Form = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-[2rem] pb-[6.5rem] pt-[2rem] container mx-auto  md:px-20 px-4">
+    <div className="grid md:grid-cols-2 gap-[3rem] pb-[6.5rem] pt-[2rem] container mx-auto  md:px-20 px-4">
       <div className=" flex justify-end">
         <Image
           priority={false}
           src={ImageLike}
-          className="h-full max-h-[38rem] object-cover rounded-[1.3rem]"
+          className="h-full max-h-[26rem] md:max-h-[38.1rem] object-cover rounded-[1.3rem]"
           alt=""
         />
       </div>
@@ -47,7 +47,7 @@ const Form = () => {
             placeholder="Phone number"
             className="border-b-[1px] border-[#CFCFCF] w-full p-4"
           />
-          <div className="flex items-center gap-3 py-1">
+          <div className="flex items-center gap-3 py-1 flex-wrap">
             <p className="font-semibold">Preferred Contact Method:</p>
             <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">Email</button>
             <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">Phone Call</button>
