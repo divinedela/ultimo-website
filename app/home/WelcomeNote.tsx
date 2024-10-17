@@ -6,14 +6,13 @@ const WelcomeNote = () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="absolute bottom-[2rem] left-[1.5rem] z-10 text-white bg-black/30 rounded-[2rem] p-[2rem] backdrop-blur-sm">
+    <div className="hidden absolute bottom-[2rem] left-[1.5rem] z-10 text-white bg-black/30 rounded-[2rem] p-[2rem] backdrop-blur-sm">
       <h2 className="text-[1rem] font-light">Welcome to Ultimo Gardens</h2>
       <h1 className="mt- text-[2rem] font-bold">
         <span className="text-green-400 italic">Green</span> Luxury in Accra’s
         <br />
         Premier Gated Community
       </h1>
-      {/* <TourBookingForm /> */}
       {showForm && <TourBookingForm />}
 
       {!showForm && (
