@@ -5,12 +5,12 @@ import ImageLike from "../../public/assets/img/form-bg.jpeg";
 
 const Form = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-[3rem] pb-[6.5rem] pt-[2rem] container mx-auto  md:px-20 px-4">
-      <div className=" flex justify-end">
+    <div className="grid lg:grid-cols-2 gap-[3rem] pb-[2rem] lg:pb-[6.5rem] pt-[2rem] container mx-auto  md:px-20 px-4 h-fit">
+      <div className=" flex justify-end h-full">
         <Image
           priority={false}
           src={ImageLike}
-          className="h-full max-h-[26rem] md:max-h-[38.1rem] object-cover rounded-[1.3rem]"
+          className="h-full max-h-[26rem] md:max-h-full object-cover rounded-[1.3rem]"
           alt=""
         />
       </div>

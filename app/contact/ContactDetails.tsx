@@ -6,12 +6,12 @@ import GoogleMap from "./GoogleMap";
 const ContactDetails = () => {
   return (
     <div className="container mx-auto  md:px-20 px-4 pb-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[1.5rem] mt-[3rem]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-[1.5rem] mt-[3rem]">
         <div className="col-span-2">
           <h3 className="text-[#28382B] text-2xl font-[700]">Find us</h3>
         </div>
-        <div className="col-span-3 space-y-6">
-          <div className="flex justify-between">
+        <div className="col-span-4 space-y-6">
+          <div className="flex justify-between flex-wrap sm:flex-nowrap gap-[1.5rem]">
             <div className="text-[#5B6B5D]">
               <h3 className="text-[1rem] font-[700] mb-2">Phone:</h3>
               <ul className="text-sm mb-3">
