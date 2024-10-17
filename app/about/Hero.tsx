@@ -5,7 +5,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="px-6">
+    <div className="px-6 my-[1rem]">
       <div
         className="bg-no-repeat bg-center bg-cover rounded-[3rem] h-full relative group overflow-hidden container mx-auto min-h-[30rem]"
         style={{
