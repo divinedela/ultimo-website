@@ -27,7 +27,7 @@ const About = () => {
       </div>
       <div className=" flex justify-end">
         <Image
-          priority={true}
+          priority={false}
           src={ImageLike}
           className="h-full max-h-[26rem] object-cover rounded-[1.3rem]"
           alt=""

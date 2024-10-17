@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { GoDotFill } from "react-icons/go";
+import Logo from "../public/assets/img/ultimo_logo.png";
 
 const Header = () => {
-  const currentPath = usePathname()
+  const currentPath = usePathname();
 
   const navList = [
     { name: "Home", link: "/" },
@@ -20,7 +22,7 @@ const Header = () => {
   return (
     <header className="container mx-auto flex justify-between items-center  py-4 md:px-20">
       <div className="flex items-center space-x-2">
-        <img src="/assets/img/ultimo_logo.png" alt="Ultimo Logo" />
+        <Image src={Logo} alt="Ultimo Logo" priority={false} />
       </div>
 
       <nav className="hidden md:flex space-x-8">

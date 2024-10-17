@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Image, { StaticImageData } from "next/image";
@@ -34,23 +35,23 @@ const Featured = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[1.5rem] mt-[3rem]">
           <CustomImageCard
             title="Modern Fitness Center"
-            span={3}
+            span="md:col-span-3"
             image={FitnessCenter}
           />
           <CustomImageCard
             image={ElectricVehicle}
             title="Electric vehicle charging ports"
-            span={2}
+            span="md:col-span-2"
           />
           <CustomImageCard
             image={InverterACs}
             title="Inverter ACs and LED bulbs "
-            span={2}
+            span="md:col-span-2"
           />
           <CustomImageCard
             image={SolarPower}
             title="Solar Power Generation"
-            span={3}
+            span="md:col-span-3"
           />
         </div>
       </div>
@@ -62,26 +63,21 @@ export default Featured;
 
 interface CustomImageCardProps {
   title: string;
-  span?: number;
+  span: string;
   image: string | StaticImageData;
 }
 export const CustomImageCard: React.FC<CustomImageCardProps> = ({
   title,
-  span = 1,
+  span,
   image,
 }) => {
   return (
     <div
-      className="bg-white p-6 rounded-[1.3rem] flex flex-col gap-[1rem]"
-      style={{
-        gridColumn: `span ${window?.innerWidth > 768 ? span : 1} / span ${
-          window?.innerWidth > 768 ? span : 1
-        }`,
-      }}
+      className={`bg-white p-6 rounded-[1.3rem] flex flex-col gap-[1rem] ${span}`}
     >
       <h3 className="text-[#28382B] text-xl font-[700]">{title}</h3>
       <Image
-        priority={true}
+        priority={false}
         src={image}
         alt=""
         className="h-full max-h-[21rem] object-cover rounded-xl"
