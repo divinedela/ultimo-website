@@ -22,7 +22,9 @@ const Header = () => {
   return (
     <header className="container mx-auto flex justify-between items-center  py-4 md:px-20">
       <div className="flex items-center space-x-2">
-        <Image src={Logo} alt="Ultimo Logo" priority={false} />
+        <Link href="/">
+          <Image src={Logo} alt="Ultimo Logo" priority={false} />
+        </Link>
       </div>
 
       <nav className="hidden md:flex space-x-8">
