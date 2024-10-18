@@ -26,7 +26,7 @@ const BlogDetails: React.FC = () => {
             <p>3rd October, 2024</p>
             <p>3 mins read</p>
           </div>
-          <h3 className="text-[#28382B] text-[2rem] font-[700]">
+          <h3 className="text-[#28382B] text-[2.25rem] font-[700]">
             Navigating the Current Real Estate Landscape: Tips for Buyers and
             Sellers
           </h3>

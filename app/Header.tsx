@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import Logo from "../public/assets/img/ultimo_logo.png";
 import { motion } from "framer-motion";
+import Button from "./companents/Button";
 
 const Header = () => {
   const currentPath = usePathname();
@@ -96,12 +97,8 @@ const Header = () => {
       </nav>
 
       <div className="hidden md:flex space-x-4">
-        <button className="bg-[#348841] text-white font-semibold px-4 py-2 rounded hover:bg-green-700">
-          Book a tour
-        </button>
-        <button className="border-2 border-[#D6AB11] text-[#D6AB11] font-semibold px-4 py-2 rounded hover:bg-[#D6AB11] hover:text-white">
-          Explore Property
-        </button>
+        <Button>Book a tour</Button>
+        <Button type="secondary">Explore Property</Button>
       </div>
     </header>
   );

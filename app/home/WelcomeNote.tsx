@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import TourBookingForm from "./TourBookingForm";
 import { AnimatePresence, motion } from "framer-motion";
+import Button from "../companents/Button";
 
 const WelcomeNote = () => {
   const [showForm, setShowForm] = useState(false);
@@ -39,20 +40,9 @@ const WelcomeNote = () => {
       </AnimatePresence>
 
       {!showForm && (
-        <div className="mt-5 flex justify-between w-full">
-          <button
-            onClick={() => setShowForm(true)}
-            type="button"
-            className="bg-green-500 text-white py-3 px-6 rounded-md font-semibold hover:bg-green-600 transition"
-          >
-            Book a tour
-          </button>
-          <button
-            type="button"
-            className="border border-yellow-400 text-yellow-400 py-3 px-6 rounded-md font-semibold hover:bg-yellow-400 hover:text-white transition"
-          >
-            Explore Property
-          </button>
+        <div className="mt-5 flex justify-between w-full gap-6">
+          <Button className="w-full" onClick={() => setShowForm(true)}>Book a tour</Button>
+          <Button className="w-full" type="secondary">Explore Property</Button>
         </div>
       )}
     </div>

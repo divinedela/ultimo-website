@@ -16,9 +16,9 @@ const Form = () => {
       </div>
       <div className=" space-y-2">
         <h3 className="text-[#28382B] text-[1rem] font-[700]">Contact Us</h3>
-        <h3 className="text-[2rem] italic font-[700]">
+        <h3 className="text-[2.25rem] font-[700]">
           Guiding your path to a{" "}
-          <span className="text-[#348841]">new home</span>
+          <span className="text-[#348841] italic">new home</span>
         </h3>
 
         <form
@@ -49,9 +49,15 @@ const Form = () => {
           />
           <div className="flex items-center gap-3 py-1 flex-wrap">
             <p className="font-semibold">Preferred Contact Method:</p>
-            <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">Email</button>
-            <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">Phone Call</button>
-            <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">WhatsApp</button>
+            <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">
+              Email
+            </button>
+            <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">
+              Phone Call
+            </button>
+            <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">
+              WhatsApp
+            </button>
           </div>
           <textarea
             name="message"

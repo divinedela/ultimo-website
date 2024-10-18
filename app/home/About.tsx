@@ -10,8 +10,8 @@ const About = () => {
         <h3 className="text-[#28382B] text-[1rem] font-[700]">
           About Ultimo Gardens
         </h3>
-        <h3 className="text-[2rem] italic font-[700]">
-          Experience living, <span className="text-[#348841]">reimagined.</span>
+        <h3 className="text-[2.25rem] font-[700]">
+          Experience living, <span className="text-[#348841] italic">reimagined.</span>
         </h3>
         <p className="text-[1rem] text-[#5B6B5D] leading-relaxed">
           Ultimo Gardens offers a serene, modern living experience with

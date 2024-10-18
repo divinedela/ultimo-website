@@ -16,8 +16,8 @@ const Featured = () => {
             <h3 className="text-[#28382B] text-[1rem] font-[700]">
               Featured Facilities
             </h3>
-            <h3 className="text-[2rem] italic font-[700]">
-              Facilities <span className="text-[#348841]">designed</span> for
+            <h3 className="text-[2.25rem] font-[700]">
+              Facilities <span className="text-[#348841] italic">designed</span> for
               effortless living.
             </h3>
             <p className="text-[1rem] text-[#5B6B5D] leading-relaxed">

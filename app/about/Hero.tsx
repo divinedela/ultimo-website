@@ -16,7 +16,7 @@ const Hero = () => {
 
         <div className="absolute bottom-[2rem] left-[1.5rem] z-10 text-white p-[2rem]">
           <h2 className="text-[1rem] font-[700]">About Us</h2>
-          <h1 className="mt- text-[2rem] font-bold">
+          <h1 className="mt- text-[2.25rem] font-bold">
             Elevating living through <br />{" "}
             <span className="text-green-400 italic">Green Luxury.</span>
           </h1>
