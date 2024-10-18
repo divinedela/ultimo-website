@@ -67,31 +67,37 @@ const Header = () => {
             >
               {navItem.name}
             </Link>
-            <p className="text-[#D6AB11]">
-              {isActive(navItem.link) && <GoDotFill size={20} />}
-            </p>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity:
-                  (loading && currentIndex === i) ||
-                  hoveredItem === navItem.name
-                    ? 1
-                    : 0,
-                x: loading && currentIndex === i ? [0, -10, 10, 5, 0] : 0,
-              }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-                repeat: loading ? Infinity : 0,
-                repeatType: "loop",
-              }}
-              className="text-[#D6AB11]"
-            >
-              <span>
+            {isActive(navItem.link) && (
+              <p className="text-[#D6AB11]">
                 <GoDotFill size={20} />
-              </span>
-            </motion.p>
+              </p>
+            )}
+
+            {((loading && currentIndex === i) ||
+              hoveredItem === navItem.name) && (
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity:
+                    (loading && currentIndex === i) ||
+                    hoveredItem === navItem.name
+                      ? 1
+                      : 0,
+                  x: loading && currentIndex === i ? [0, -10, 10, 5, 0] : 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  repeat: loading ? Infinity : 0,
+                  repeatType: "loop",
+                }}
+                className="text-[#D6AB11]"
+              >
+                <span>
+                  <GoDotFill size={20} />
+                </span>
+              </motion.p>
+            )}
           </div>
         ))}
       </nav>
