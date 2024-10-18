@@ -31,21 +31,21 @@ const Form = () => {
             name="name"
             id="name"
             placeholder="Full name"
-            className="border-b-[1px] border-[#CFCFCF] w-full p-4"
+            className="border-b-[1px] border-[#CFCFCF] w-full p-4 focus:outline-none"
           />
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Email address"
-            className="border-b-[1px] border-[#CFCFCF] w-full p-4"
+            className="border-b-[1px] border-[#CFCFCF] w-full p-4 focus:outline-none"
           />
           <input
             type="tel"
             name="phone"
             id="phone"
             placeholder="Phone number"
-            className="border-b-[1px] border-[#CFCFCF] w-full p-4"
+            className="border-b-[1px] border-[#CFCFCF] w-full p-4 focus:outline-none"
           />
           <div className="flex items-center gap-3 py-1 flex-wrap">
             <p className="font-semibold">Preferred Contact Method:</p>
@@ -57,7 +57,7 @@ const Form = () => {
             name="message"
             id="message"
             placeholder="Message"
-            className="border-[1px] border-[#CFCFCF] w-full p-4 rounded-lg"
+            className="border-[1px] border-[#CFCFCF] w-full p-4 focus:outline-none rounded-lg"
           ></textarea>
           <div className="flex items-center gap-3 text-[#28382B]">
             <input
