@@ -6,7 +6,7 @@ import Footer from "../Footer";
 import Form from "./Form";
 import ContactDetails from "./ContactDetails";
 
-const page = () => {
+const ContactPage = () => {
   return (
     <div className="bg-white">
       <Header />
@@ -17,4 +17,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactPage;
