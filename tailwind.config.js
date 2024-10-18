@@ -4,7 +4,11 @@ import daisyui from "daisyui";
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Effra Trial", "Inter", "sans-serif"],
+      },
+    },
   },
   daisyui: {
     themes: ["cupcake"], // or any other theme

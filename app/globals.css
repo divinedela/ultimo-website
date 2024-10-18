@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Effra Trial";
+  src: url("/fonts/EffraTrial.woff2") format("woff2"),
+    /* Adjust the path */ url("/fonts/EffraTrial.woff") format("woff"); /* Adjust the path */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Effra Trial", "Inter", sans-serif; /* Use Effra as the primary font */
+}
