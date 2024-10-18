@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React from "react";
 import { GoDotFill } from "react-icons/go";
 import Logo from "../public/assets/img/ultimo_logo.png";
 
@@ -15,12 +15,20 @@ const Header = () => {
     { name: "The Project", link: "#" },
     { name: "About Us", link: "/about" },
     { name: "Gallery", link: "/gallery" },
-    { name: "Blog", link: "#" },
+    { name: "Blog", link: "/blog" },
     { name: "Contact Us", link: "/contact" },
   ];
 
+  const isActive = (link: string) => {
+    if (link === "/") {
+      return currentPath === "/";
+    }
+
+    return currentPath?.startsWith(link);
+  };
+
   return (
-    <header className="container mx-auto flex justify-between items-center  py-4 md:px-20">
+    <header className="container mx-auto flex justify-between items-center py-4 md:px-20">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <Image src={Logo} alt="Ultimo Logo" priority={false} />
@@ -29,17 +37,20 @@ const Header = () => {
 
       <nav className="hidden md:flex space-x-8">
         {navList.map((navItem, i) => (
-          <div key={i} className="flex flex-col items-center">
+          <div key={i} className="flex flex-col items-center group">
             <Link
               href={navItem.link}
               className={`hover:text-gray-800 text-[#28382B] ${
-                currentPath === navItem.link ? "text-gray-600" : ""
+                isActive(navItem.link) ? "text-gray-600" : ""
               } `}
             >
               {navItem.name}
             </Link>
             <p className="text-[#D6AB11]">
-              {currentPath === navItem.link && <GoDotFill size={20} />}
+              {isActive(navItem.link) && <GoDotFill size={20} />}
+            </p>
+            <p className="opacity-0 group-hover:opacity-100 text-[#D6AB11] transition-all group-focus:animate-pulse">
+              {!isActive(navItem.link) && <GoDotFill size={20} />}
             </p>
           </div>
         ))}
