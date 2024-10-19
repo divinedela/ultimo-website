@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import Logo from "../public/assets/img/ultimo_logo.png";
 import { motion } from "framer-motion";
-import Button from "./companents/Button";
+import Button from "./components/Button";
 
 const Header = () => {
   const currentPath = usePathname();
@@ -17,7 +17,7 @@ const Header = () => {
 
   const navList = [
     { name: "Home", link: "/" },
-    { name: "The Project", link: "#" },
+    { name: "The Project", link: "/project" },
     { name: "About Us", link: "/about" },
     { name: "Gallery", link: "/gallery" },
     { name: "Blog", link: "/blog" },
@@ -41,7 +41,7 @@ const Header = () => {
   };
 
   return (
-    <header className="container mx-auto flex justify-between items-center py-4 md:px-20">
+    <header className="container mx-auto flex justify-between items-center py-4 pt-8 md:px-20">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <Image src={Logo} alt="Ultimo Logo" priority={false} />
@@ -60,8 +60,10 @@ const Header = () => {
               }
               onMouseLeave={handleMouseLeave}
               onClick={() => {
-                setCurrentIndex(i);
-                setLoading(true);
+                if (currentPath !== navItem.link) {
+                  setLoading(true);
+                  setCurrentIndex(i);
+                }
               }}
               className={`hover:text-gray-800 text-[1rem] text-[#28382B]  `}
             >
