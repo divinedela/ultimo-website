@@ -51,22 +51,24 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
   title,
 }) => {
   return (
-    <div className="border-[0.5px] border-[#CFCFCF] p-6 rounded-[1.3rem] flex flex-col gap-[1rem]">
+    <div className="rounded-[1.3rem] flex flex-col gap-[1rem]">
       <Image
         src={image}
         priority={false}
         alt=""
         className="h-full max-h-[12rem] object-cover rounded-xl"
       />
-      <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
-        <p>3rd October, 2024</p>
-        <p>3 mins read</p>
+      <div className="bg-[#28382B] p-6 rounded-b-xl mt-[-1.6rem]">
+        <div className="text-sm text-[#CFCFCF] flex justify-between items-center">
+          <p className="mb-2">3rd October, 2024</p>
+          <p>3 mins read</p>
+        </div>
+        <h3 className="text-white text-xl font-[700] h-[4rem]">{title}</h3>
+        <button className="text-[#D6AB11] text-[1rem] font-[700] flex gap-4 items-center mt-2">
+          <span>Read more</span>
+          <IoArrowForwardCircleOutline className="shrink-0" size={28} />
+        </button>
       </div>
-      <h3 className="text-[#28382B] text-xl font-[700] h-[4rem]">{title}</h3>
-      <button className="text-[#348841] text-[1rem] font-[700] flex gap-4 items-center mt-2">
-        <span>Read more</span>
-        <IoArrowForwardCircleOutline className="shrink-0" size={28} />
-      </button>
     </div>
   );
 };
