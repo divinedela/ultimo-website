@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const HomePage = () => {
   return (
-    <div className="bg-white pt-4">
+    <div className="bg-white">
       <Header />
       <Home />
       <Footer />
