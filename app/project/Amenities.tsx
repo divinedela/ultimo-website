@@ -14,7 +14,7 @@ const Amenities = () => {
         ALL OF THE LUXURIES IN LIFE YOU DESERVE
       </p>
 
-      <div className="grid grid-cols-3 gap-[2rem] mt-[3rem] max-w-[75rem] mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem] mt-[3rem] max-w-[75rem] mx-auto">
         {[1, 2, 3, 4, 5, 6].map((_, i) => (
           <div key={i}>
             <AmenitiesCard type={i % 2 === 0 ? "secondary" : "primary"} />

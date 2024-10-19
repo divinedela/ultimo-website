@@ -82,7 +82,7 @@ const Experience = () => {
           </p>
 
           {currentFloor === null ? (
-            <div className="grid md:grid-cols-3 my-[2rem] mt-[5rem] max-w-[75rem] mx-auto">
+            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[75rem] mx-auto">
               <div className="bg-[#28382B] p-[4rem]">
                 <div className="flex justify-between items-center">
                   <h3 className=" text-[1.6rem] font-[700]">FLOOR PLANS</h3>
@@ -114,10 +114,10 @@ const Experience = () => {
 
                 <Button className="rounded-none">DOWNLOAD PDF</Button>
               </div>
-              <div className="bg-white w-full col-span-2"></div>
+              <div className="bg-white w-full lg:col-span-2 min-h-[20rem] -order-1 lg:order-none"></div>
             </div>
           ) : (
-            <div className="grid md:grid-cols-3 my-[2rem] mt-[5rem] max-w-[75rem] mx-auto">
+            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[75rem] mx-auto">
               <div className="bg-[#28382B] p-[4rem]">
                 <div className="flex justify-between items-center">
                   <h3 className=" text-[1.6rem] font-[700]">FLOOR PLANS</h3>
@@ -160,7 +160,7 @@ const Experience = () => {
                 <Button className="rounded-none">DOWNLOAD PDF</Button>
               </div>
               <div
-                className="bg-white w-full bg-contain bg-no-repeat bg-center col-span-2"
+                className="bg-white w-full bg-contain bg-no-repeat bg-center lg:col-span-2 min-h-[20rem] -order-1 lg:order-none"
                 style={{
                   backgroundImage: `url('${currentFloor?.image}')`,
                 }}
