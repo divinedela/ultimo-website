@@ -25,7 +25,7 @@ const TourBookingForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto  pt-8 rounded-lg shadow-md">
+    <div className="max-w-lg pt-8 rounded-lg shadow-md my-0 mx-0">
       <form
         onSubmit={handleSubmit}
         className="grid grid-cols-1 gap-6 md:grid-cols-2"

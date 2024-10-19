@@ -12,7 +12,7 @@ const WelcomeNote = () => {
 
   return (
     <>
-      <div className="hidden md:block absolute bottom-[2rem] left-[1.5rem] z-10 text-white bg-black/30 rounded-[2rem] p-[2rem] backdrop-blur-sm w-full max-w-[33rem]">
+      <div className="hidden md:block absolute bottom-[2rem] left-[1.5rem] z-10 text-white bg-black/30 rounded-[2rem] p-[2rem] backdrop-blur-sm w-full max-w-[37rem]">
         <h2 className="text-[1rem] font-[700]">Welcome to Ultimo Gardens</h2>
         <div className="flex gap-3 gap-y-0 flex-wrap">
           {headingWords.map((word, index) => (
@@ -81,7 +81,7 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut", delay: delay || 0.2 }}
-      className={`text-[2.25rem] font-bold ${className}`}
+      className={`text-[2.5rem] font-bold ${className}`}
     >
       {children}
     </motion.div>
