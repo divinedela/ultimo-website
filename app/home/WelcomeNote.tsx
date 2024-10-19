@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import TourBookingForm from "./TourBookingForm";
 import { AnimatePresence, motion } from "framer-motion";
-import Button from "../companents/Button";
+import Button from "../components/Button";
 
 const WelcomeNote = () => {
   const [showForm, setShowForm] = useState(false);
