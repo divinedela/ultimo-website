@@ -1,4 +1,4 @@
-"user client";
+"use client";
 import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -8,6 +8,7 @@ import Residences from "./Residences";
 import Experience from "./Experience";
 import Amenities from "./Amenities";
 import Gallery from "./Gallery";
+
 
 const ProjectPage = () => {
   return (

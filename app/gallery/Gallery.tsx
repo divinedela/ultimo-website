@@ -1,4 +1,4 @@
-"user client";
+"use client";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import FutureOfGreenLiving from "../../public/assets/img/Future_of_Green-Living.jpeg";

@@ -1,4 +1,4 @@
-"user client";
+"use client";
 import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -12,7 +12,8 @@ const GalleryPage = () => {
         <div className="space-y-2">
           <h3 className="text-[#28382B] text-[1rem] font-[700]">Gallery</h3>
           <h3 className="text-[2.25rem] font-[700]">
-            A glimpse into <span className="text-[#348841] italic">Green Luxury.</span>
+            A glimpse into{" "}
+            <span className="text-[#348841] italic">Green Luxury.</span>
           </h3>
         </div>
 
