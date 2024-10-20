@@ -10,6 +10,10 @@
   font-style: normal;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Effra Trial", "Inter", sans-serif; /* Use Effra as the primary font */
 }
