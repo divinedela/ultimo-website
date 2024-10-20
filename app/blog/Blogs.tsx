@@ -7,6 +7,7 @@ import HomeTips from "../../public/assets/img/Tips_for_Sustainable-Home.png";
 import UltimoGardens from "../../public/assets/img/Ultimo-Gardens.jpeg";
 import { IoIosSearch } from "react-icons/io";
 import { usePathname, useRouter } from "next/navigation";
+import Loading from "../components/Loading";
 
 const Blogs: React.FC = () => {
   const currentPath = usePathname();
@@ -82,6 +83,8 @@ const Blogs: React.FC = () => {
           onClick={() => goToPost("789")}
         />
       </div>
+
+      {loading && <Loading />}
     </div>
   );
 };
