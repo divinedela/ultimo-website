@@ -7,9 +7,6 @@ import Link from "next/link";
 
 const Hero = () => {
   const headingWords = "LUXURY LIVING".replaceAll(" ", "-").split("");
-  const subHeadingWords = "PRIVATE DOWNTOWN LIVING IN CHARLOTTE, NC"
-    .replaceAll(" ", "-")
-    .split("");
 
   return (
     <div className="my-[1rem]">
@@ -26,7 +23,7 @@ const Hero = () => {
             {headingWords.map((word, index) => (
               <CustomHeading
                 key={index}
-                delay={index * 0.2}
+                delay={index * 0.1}
                 className={`text-[4rem] md:text-[6rem] text-center leading-[1] lg:leading-normal ${
                   word === "-" && "text-transparent"
                 }`}
@@ -39,33 +36,21 @@ const Hero = () => {
             LUXURY LIVING
           </h1>
 
-          <div className="hidden md:flex gap-2 gap-y-0 flex-wrap">
-            {subHeadingWords.map((word, index) => (
-              <CustomHeading
-                key={index}
-                delay={index * 0.1}
-                duration={0.1}
-                className={`text-[1rem] font-[500] text-center ${
-                  word === "-" && "text-transparent"
-                }`}
-              >
-                {word} {index === 3 && <br className="hidden md:block" />}{" "}
-              </CustomHeading>
-            ))}
-          </div>
-          <h2 className="text-[1rem] font-[500] tracking-[0.4em] text-center lg:hidden">
-            PRIVATE DOWNTOWN LIVING IN CHARLOTTE, NC
-          </h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
-            className="hidden md:flex space-x-4 mt-[3rem]"
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
+            className=" flex items-center flex-col"
           >
-            <Button className="rounded-none">SCHEDULE A SHOWING</Button>
-            <Button className="rounded-none" type="secondary">
-              <Link href="#experience">DISCOVER MORE</Link>
-            </Button>
+            <h2 className="text-[1rem] font-[500] tracking-[0.4em] text-center">
+              PRIVATE DOWNTOWN LIVING IN CHARLOTTE, NC
+            </h2>
+            <div className="hidden md:flex space-x-1 mt-[3rem] w-full justify-center">
+              <Button className="rounded-none font-normal text-sm w-full max-w-[15rem] py-3">SCHEDULE A SHOWING</Button>
+              <Button className="rounded-none  font-normal text-sm w-full max-w-[15rem] py-3" type="secondary">
+                <Link href="#experience">DISCOVER MORE</Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -85,7 +70,7 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
   children,
   delay,
   className,
-  duration = 0.3,
+  duration = 0,
 }) => {
   return (
     <motion.div

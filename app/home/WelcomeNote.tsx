@@ -45,7 +45,7 @@ const WelcomeNote = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="mt-5 flex justify-between w-full gap-6"
+              className="mt-5 flex justify-between w-full gap-3"
             >
               <Button className="w-full" onClick={() => setShowForm(true)}>
                 Book a tour
