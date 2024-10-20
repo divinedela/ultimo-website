@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import Residences from "./Residences";
 import Experience from "./Experience";
 import Amenities from "./Amenities";
+import Gallery from "./Gallery";
 
 const ProjectPage = () => {
   return (
@@ -18,6 +19,7 @@ const ProjectPage = () => {
       </div>
       <Experience />
       <Amenities />
+      <Gallery />
       <Video />
       <Footer />
     </div>
