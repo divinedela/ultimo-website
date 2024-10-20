@@ -7,6 +7,7 @@ import {
 } from "react-icons/io5";
 import Button from "../components/Button";
 import { floorPlans } from "../dummy data/floor_plans";
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 interface Feature {
   bedroom?: number;
@@ -44,7 +45,7 @@ const Experience = () => {
       }
     }
   };
-  
+
   const handlePrevious = () => {
     if (currentFloor) {
       const currentIndex = floorPlans.findIndex(
@@ -82,16 +83,17 @@ const Experience = () => {
           </p>
 
           {currentFloor === null ? (
-            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[76rem] mx-auto px-4">
+            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[78rem] mx-auto px-4">
               <div className="bg-[#28382B] p-[4rem]">
                 <div className="flex justify-between items-center">
-                  <h3 className=" text-[1.6rem] font-[700]">FLOOR PLANS</h3>
+                  <h3 className=" text-[1.6rem] font-[400]">FLOOR PLANS</h3>
                   <div className="text-[#D6AB11] flex gap-2 items-center opacity-45 cursor-not-allowed">
-                    <IoArrowBackCircleOutline className="shrink-0" size={32} />
-                    <IoArrowForwardCircleOutline
-                      className="shrink-0"
-                      size={32}
-                    />
+                    <div className="border-[1px] border-[#D6AB11] rounded-full size-[2rem] flex justify-center items-center ">
+                      <HiArrowLongLeft className="shrink-0" />
+                    </div>
+                    <div className="border-[1px] border-[#D6AB11] rounded-full size-[2rem] flex justify-center items-center ">
+                      <HiArrowLongRight className="shrink-0" />
+                    </div>
                   </div>
                 </div>
 
@@ -112,26 +114,28 @@ const Experience = () => {
                   blan ditiis prae sentium voluptatum deleniti.
                 </p>
 
-                <Button className="rounded-none">DOWNLOAD PDF</Button>
+                <Button className="rounded-none font-normal text-sm px-[2rem]">DOWNLOAD PDF</Button>
               </div>
               <div className="bg-white w-full lg:col-span-2 min-h-[20rem] -order-1 lg:order-none"></div>
             </div>
           ) : (
-            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[76rem] mx-auto px-4">
+            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[78rem] mx-auto px-4">
               <div className="bg-[#28382B] p-[4rem]">
                 <div className="flex justify-between items-center">
-                  <h3 className=" text-[1.6rem] font-[700]">FLOOR PLANS</h3>
+                  <h3 className=" text-[1.6rem] font-[400]">FLOOR PLANS</h3>
                   <div className="text-[#D6AB11] flex gap-2 items-center">
-                    <IoArrowBackCircleOutline
+                    <div
                       onClick={handlePrevious}
-                      className="shrink-0 hover:text-[#348841] cursor-pointer"
-                      size={32}
-                    />
-                    <IoArrowForwardCircleOutline
+                      className="border-[1px] border-[#D6AB11] rounded-full size-[2rem] flex justify-center items-center hover:bg-[#D6AB11] hover:text-white cursor-pointer transition-all"
+                    >
+                      <HiArrowLongLeft className="shrink-0" />
+                    </div>
+                    <div
                       onClick={handleNext}
-                      className="shrink-0 hover:text-[#348841] cursor-pointer"
-                      size={32}
-                    />
+                      className="border-[1px] border-[#D6AB11] rounded-full size-[2rem] flex justify-center items-center hover:bg-[#D6AB11] hover:text-white cursor-pointer transition-all"
+                    >
+                      <HiArrowLongRight className="shrink-0" />
+                    </div>
                   </div>
                 </div>
 
@@ -157,7 +161,7 @@ const Experience = () => {
                   blan ditiis prae sentium voluptatum deleniti.
                 </p>
 
-                <Button className="rounded-none">DOWNLOAD PDF</Button>
+                <Button className="rounded-none font-normal py-3 text-sm px-[2rem]">DOWNLOAD PDF</Button>
               </div>
               <div
                 className="bg-white w-full bg-contain bg-no-repeat bg-center lg:col-span-2 min-h-[20rem] -order-1 lg:order-none"
