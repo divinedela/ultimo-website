@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import Logo from "../public/assets/img/ultimo_logo.png";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Button from "./components/Button";
 
 const Header = () => {
@@ -48,21 +48,44 @@ const Header = () => {
 
       <nav className="hidden md:flex space-x-8">
         {navList.map((navItem, i) => (
-          <div key={i} className="flex flex-col items-center group">
+          <div
+            key={i}
+            className="flex flex-col items-center group h-[2.5rem] relative"
+          >
             <Link
               href={navItem.link}
               onMouseEnter={() => handleMouseEnter(navItem.name)}
               onMouseLeave={handleMouseLeave}
-              className={`hover:text-gray-800 text-[1rem] text-[#28382B]  `}
+              className={`hover:text-gray-800 text-[1rem] text-[#28382B] h-full z-10 `}
             >
               {navItem.name}
             </Link>
-            {(isActive(navItem.link) || hoveredItem === navItem.name) && (
+            <AnimatePresence>
+              {isActive(navItem.link) && (
+                <motion.p
+                  key={currentPath}
+                  initial={{ opacity: 0, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{
+                    opacity: 0,
+                    x: navList?.length / 2 > i ? 20 : -20,
+                    transition: { duration: 0.5 },
+                  }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  className="text-[#D6AB11] absolute bottom-0 "
+                >
+                  <GoDotFill size={20} />
+                </motion.p>
+              )}
+            </AnimatePresence>
+            
+            {!isActive(navItem.link) && hoveredItem === navItem.name && (
               <motion.p
+                key={currentPath}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
-                className="text-[#D6AB11]"
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="text-[#D6AB11] absolute bottom-0 "
               >
                 <GoDotFill size={20} />
               </motion.p>
