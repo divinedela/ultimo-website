@@ -69,7 +69,7 @@ const Experience = () => {
         <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-[#1D231EE5]  to-black/40" />
 
         <div className="z-10 text-white py-[4rem] container mx-auto  md:px-20 px-4 relative">
-          <h1 className="text-[#D6AB11] text-[3rem] font-[500] tracking-[0.3em] text-center">
+          <h1 className="text-[#D6AB11] text-[3rem] tracking-[0.3em] text-center">
             EXPERIENCE HALTON
           </h1>
           <p className="text-[1rem] leading-relaxed text-center text-balance mt-4 w-full max-w-[70rem] mx-auto">

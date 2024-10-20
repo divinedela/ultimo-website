@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Amenities = () => {
   return (
     <div className=" py-[4rem] container mx-auto  md:px-20 px-4 relative">
-      <h1 className=" text-[3rem] font-[500] tracking-[0.3em] text-center">
+      <h1 className=" text-[3rem] tracking-[0.3em] text-center">
         AMENITIES
       </h1>
       <p className="text-[1rem] leading-relaxed text-center tracking-[0.4em]">

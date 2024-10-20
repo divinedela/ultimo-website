@@ -9,7 +9,7 @@ const Residences = () => {
     <div className="pt-[4rem]">
       <div className="grid md:grid-cols-2 gap-[1rem]">
         <div className=" space-y-4 w-full max-w-[28rem]">
-          <h3 className="text-[2.25rem] font-[700] tracking-[0.2em] text-wrap">
+          <h3 className="text-[2.25rem] tracking-[0.2em] text-wrap">
             LUXURY DOWNTOWN{" "}
             <span className="text-[#348841] italic">LIVING</span>
           </h3>

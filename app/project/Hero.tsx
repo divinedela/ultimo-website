@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="w-full h-full absolute top-0 left-0 bg-black/60" />
 
         <div className="z-10 text-white p-[2rem] flex items-center flex-col">
-          <h1 className="text-[6rem] font-[500] tracking-[0.3em] text-center">
+          <h1 className="text-[6rem] tracking-[0.3em] text-center">
             LUXURY LIVING
           </h1>
           <h2 className="text-[1rem] font-[500] tracking-[0.4em]">
