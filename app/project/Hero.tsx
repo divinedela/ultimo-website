@@ -3,6 +3,7 @@
 import React from "react";
 import Button from "../components/Button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   const headingWords = "LUXURY LIVING".replaceAll(" ", "-").split("");
@@ -63,7 +64,7 @@ const Hero = () => {
           >
             <Button className="rounded-none">SCHEDULE A SHOWING</Button>
             <Button className="rounded-none" type="secondary">
-              DISCOVER MORE
+              <Link href="#experience">DISCOVER MORE</Link>
             </Button>
           </motion.div>
         </div>
@@ -84,13 +85,17 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
   children,
   delay,
   className,
-  duration = 0.5,
+  duration = 0.3,
 }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: duration, ease: "easeInOut", delay: delay || 0.2 }}
+      transition={{
+        duration: duration,
+        ease: "easeInOut",
+        delay: delay || 0.2,
+      }}
       className={className}
     >
       {children}

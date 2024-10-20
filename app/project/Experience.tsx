@@ -59,7 +59,7 @@ const Experience = () => {
   console.log("currentFloor", currentFloor);
 
   return (
-    <div className="mb-[1rem] sm:-mt-[4rem]">
+    <div id="experience" className="mb-[1rem] sm:-mt-[4rem]">
       <div
         className=" overflow-hidden relative"
         style={{
