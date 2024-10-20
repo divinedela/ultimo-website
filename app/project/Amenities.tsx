@@ -14,7 +14,7 @@ const Amenities = () => {
         ALL OF THE LUXURIES IN LIFE YOU DESERVE
       </p>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem] my-[3rem] max-w-[75rem] mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[3rem] my-[3rem] max-w-[75rem] mx-auto">
         {[1, 2, 3, 4, 5, 6].map((_, i) => (
           <div key={i}>
             <AmenitiesCard type={i % 2 === 0 ? "secondary" : "primary"} />
@@ -47,8 +47,8 @@ export const AmenitiesCard: React.FC<AmenitiesProps> = ({
     initial={{ scale: 1}}
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.3 }}
-      className={`p-[2rem] flex flex-col space-y-4 items-center border border-[#28382B] ${
-        type !== "primary" ? "bg-[#28382B] text-white" : ""
+      className={`p-[2rem] py-[4rem] flex flex-col space-y-4 items-center border border-[#28382B] ${
+        type !== "primary" ? "bg-[#28382B] text-[#d9d8d7]" : ""
       }`}
     >
       <FaCarRear size={50} className="shrink-0 text-[#D6AB11]" />
