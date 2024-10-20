@@ -8,6 +8,7 @@ import Residences from "./Residences";
 import Experience from "./Experience";
 import Amenities from "./Amenities";
 import Gallery from "./Gallery";
+import Schedule from "./Schedule";
 
 
 const ProjectPage = () => {
@@ -22,6 +23,7 @@ const ProjectPage = () => {
       <Amenities />
       <Gallery />
       <Video />
+      <Schedule />
       <Footer />
     </div>
   );

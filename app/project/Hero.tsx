@@ -46,8 +46,13 @@ const Hero = () => {
               PRIVATE DOWNTOWN LIVING IN CHARLOTTE, NC
             </h2>
             <div className="hidden md:flex space-x-1 mt-[3rem] w-full justify-center">
-              <Button className="rounded-none font-normal text-sm w-full max-w-[15rem] py-3">SCHEDULE A SHOWING</Button>
-              <Button className="rounded-none  font-normal text-sm w-full max-w-[15rem] py-3" type="secondary">
+              <Button className="rounded-none font-normal text-sm w-full max-w-[15rem] py-3">
+                <Link href="#schedule">SCHEDULE A SHOWING</Link>
+              </Button>
+              <Button
+                className="rounded-none  font-normal text-sm w-full max-w-[15rem] py-3"
+                type="secondary"
+              >
                 <Link href="#experience">DISCOVER MORE</Link>
               </Button>
             </div>
