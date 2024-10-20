@@ -59,10 +59,7 @@ const Gallery = () => {
       </p>
 
       <div
-        className="grid gap-2 mt-[6rem]"
-        style={{
-          gridTemplateColumns: "repeat(auto-fit, minmax(min(23rem, 100%), 1fr)",
-        }}
+        className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-[6rem]"
       >
         {images?.map((image, i) => (
           <div
