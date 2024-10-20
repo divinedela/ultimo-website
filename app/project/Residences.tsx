@@ -6,8 +6,8 @@ import Button from "../components/Button";
 
 const Residences = () => {
   return (
-    <div className="pt-[4rem]">
-      <div className="grid md:grid-cols-2 gap-[1rem]">
+    <div className="md:pt-[4rem]">
+      <div className="grid md:grid-cols-2 gap-[2rem] md:gap-[1rem]">
         <div className=" space-y-4 w-full max-w-[28rem]">
           <h3 className="text-[2.25rem] tracking-[0.2em] text-wrap">
             LUXURY DOWNTOWN{" "}
@@ -29,11 +29,11 @@ const Residences = () => {
           />
         </div>
       </div>
-      <div className="flex justify-center -translate-y-[10rem]">
+      <div className="flex justify-end lg:justify-center -translate-y-[5rem] lg:-translate-y-[5rem] xl:-translate-y-[10rem] pr-6">
         <Image
           priority={false}
           src={ImageLink}
-          className="w-full max-w-[25rem] object-cover"
+          className="w-full max-w-[5rem] md:max-w-[15rem] lg:max-w-[20rem] xl:max-w-[25rem] object-cover"
           alt=""
         />
       </div>

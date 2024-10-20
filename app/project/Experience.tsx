@@ -59,7 +59,7 @@ const Experience = () => {
   console.log("currentFloor", currentFloor);
 
   return (
-    <div className="mb-[1rem] -mt-[4rem]">
+    <div className="mb-[1rem] sm:-mt-[4rem]">
       <div
         className=" overflow-hidden relative"
         style={{
@@ -68,7 +68,7 @@ const Experience = () => {
       >
         <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-[#1D231EE5]  to-black/40" />
 
-        <div className="z-10 text-white py-[4rem] container mx-auto  md:px-20 px-4 relative">
+        <div className="z-10 text-white py-[4rem] container mx-auto relative">
           <h1 className="text-[#D6AB11] text-[3rem] tracking-[0.3em] text-center">
             EXPERIENCE HALTON
           </h1>
@@ -82,7 +82,7 @@ const Experience = () => {
           </p>
 
           {currentFloor === null ? (
-            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[75rem] mx-auto">
+            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[76rem] mx-auto px-4">
               <div className="bg-[#28382B] p-[4rem]">
                 <div className="flex justify-between items-center">
                   <h3 className=" text-[1.6rem] font-[700]">FLOOR PLANS</h3>
@@ -117,7 +117,7 @@ const Experience = () => {
               <div className="bg-white w-full lg:col-span-2 min-h-[20rem] -order-1 lg:order-none"></div>
             </div>
           ) : (
-            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[75rem] mx-auto">
+            <div className="grid lg:grid-cols-3 my-[2rem] mt-[5rem] max-w-[76rem] mx-auto px-4">
               <div className="bg-[#28382B] p-[4rem]">
                 <div className="flex justify-between items-center">
                   <h3 className=" text-[1.6rem] font-[700]">FLOOR PLANS</h3>

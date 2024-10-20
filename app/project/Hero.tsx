@@ -16,10 +16,10 @@ const Hero = () => {
         <div className="w-full h-full absolute top-0 left-0 bg-black/60" />
 
         <div className="z-10 text-white p-[2rem] flex items-center flex-col">
-          <h1 className="text-[6rem] tracking-[0.3em] text-center">
+          <h1 className="text-[4rem] md:text-[6rem] tracking-[0.3em] text-center leading-[1] lg:leading-normal">
             LUXURY LIVING
           </h1>
-          <h2 className="text-[1rem] font-[500] tracking-[0.4em]">
+          <h2 className="text-[1rem] font-[500] tracking-[0.4em] text-center">
             PRIVATE DOWNTOWN LIVING IN CHARLOTTE, NC
           </h2>
           <div className="hidden md:flex space-x-4 mt-[3rem]">
