@@ -8,7 +8,7 @@ import Blogs from "./Blogs";
 
 const Home = () => {
   return (
-    <div className="py-[1rem]">
+    <div className="py-[1rem] bg-white">
       <Hero />
       <About />
       <Featured />

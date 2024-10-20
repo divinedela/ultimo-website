@@ -15,7 +15,7 @@ const ProjectPage = () => {
     <div className="bg-white">
       <Header />
       <Hero />
-      <div className="pb-[2rem] pt-[2rem] container mx-auto  md:px-20 px-4">
+      <div className="pb-[2rem] pt-[2rem] container mx-auto  md:px-10 px-4">
         <Residences />
       </div>
       <Experience />
