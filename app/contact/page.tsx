@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Form from "./Form";
 import ContactDetails from "./ContactDetails";

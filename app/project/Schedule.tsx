@@ -1,9 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
 import ImageLike from "../../public/assets/img/profile-woman.png";
-import { FaPhoneVolume } from "react-icons/fa";
 import { TbPhoneCall } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
 import Form from "./Form";

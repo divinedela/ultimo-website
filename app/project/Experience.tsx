@@ -1,10 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-  IoArrowBack,
-  IoArrowBackCircleOutline,
-  IoArrowForwardCircleOutline,
-} from "react-icons/io5";
 import Button from "../components/Button";
 import { floorPlans } from "../dummy data/floor_plans";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";

@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-// import Image from "../../public/assets/img/about_hero-bg.jpeg";
 
 const Hero = () => {
   return (
