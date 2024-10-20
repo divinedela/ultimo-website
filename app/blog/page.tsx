@@ -1,13 +1,10 @@
 "use client";
 import React from "react";
-import Header from "../Header";
-import Footer from "../Footer";
 import Blogs from "./Blogs";
 
 const BlogPage = () => {
   return (
     <div className="bg-white">
-      <Header />
       <div className="pb-[2rem] pt-[2rem] container mx-auto  md:px-20 px-4">
         <div className="space-y-2">
           <h3 className="text-[#28382B] text-[1rem] font-[700]">Blog</h3>
@@ -23,7 +20,6 @@ const BlogPage = () => {
 
         <Blogs />
       </div>
-      <Footer />
     </div>
   );
 };

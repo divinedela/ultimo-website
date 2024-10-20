@@ -11,8 +11,6 @@ import Button from "./components/Button";
 
 const Header = () => {
   const currentPath = usePathname();
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [loading, setLoading] = React.useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const navList = [
@@ -53,51 +51,20 @@ const Header = () => {
           <div key={i} className="flex flex-col items-center group">
             <Link
               href={navItem.link}
-              onMouseEnter={() =>
-                currentPath !== navItem.link && !loading
-                  ? handleMouseEnter(navItem.name)
-                  : null
-              }
+              onMouseEnter={() => handleMouseEnter(navItem.name)}
               onMouseLeave={handleMouseLeave}
-              onClick={() => {
-                if (currentPath !== navItem.link) {
-                  setLoading(true);
-                  setCurrentIndex(i);
-                }
-              }}
               className={`hover:text-gray-800 text-[1rem] text-[#28382B]  `}
             >
               {navItem.name}
             </Link>
-            {isActive(navItem.link) && (
-              <p className="text-[#D6AB11]">
-                <GoDotFill size={20} />
-              </p>
-            )}
-
-            {((loading && currentIndex === i) ||
-              hoveredItem === navItem.name) && (
+            {(isActive(navItem.link) || hoveredItem === navItem.name) && (
               <motion.p
                 initial={{ opacity: 0 }}
-                animate={{
-                  opacity:
-                    (loading && currentIndex === i) ||
-                    hoveredItem === navItem.name
-                      ? 1
-                      : 0,
-                  x: loading && currentIndex === i ? [0, -10, 10, 5, 0] : 0,
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  repeat: loading ? Infinity : 0,
-                  repeatType: "loop",
-                }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
                 className="text-[#D6AB11]"
               >
-                <span>
-                  <GoDotFill size={20} />
-                </span>
+                <GoDotFill size={20} />
               </motion.p>
             )}
           </div>

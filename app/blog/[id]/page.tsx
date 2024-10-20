@@ -1,7 +1,5 @@
 "use client";
 
-import Footer from "@/app/Footer";
-import Header from "@/app/Header";
 import Image, { StaticImageData } from "next/image";
 import { useParams } from "next/navigation";
 import React from "react";
@@ -13,7 +11,6 @@ const BlogDetails: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <Header />
       <div className="pb-[6rem] pt-[2rem] container mx-auto  md:px-20 px-4 grid grid-cols-1 lg:grid-cols-5 gap-[1.5rem] md:gap-[4rem]">
         <div className=" border-[#CFCFCF] flex flex-col gap-[1rem] lg:col-span-3">
           <Image
@@ -77,7 +74,6 @@ const BlogDetails: React.FC = () => {
           />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

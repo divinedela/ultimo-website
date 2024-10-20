@@ -1,14 +1,11 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
 import Hero from "./Hero";
 
 const AboutPage = () => {
   return (
     <div className="bg-white">
-      <Header />
       <Hero />
       <div className="container mx-auto  md:px-20 py-20 px-4">
         <div className="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3 md:gap-[1.5rem] mt-[3rem]">
@@ -30,7 +27,6 @@ const AboutPage = () => {
           </DetailsCard>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
