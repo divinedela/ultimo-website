@@ -1,19 +1,26 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import FutureOfGreenLiving from "../../public/assets/img/Future_of_Green-Living.jpeg";
 import HomeTips from "../../public/assets/img/Tips_for_Sustainable-Home.png";
 import UltimoGardens from "../../public/assets/img/Ultimo-Gardens.jpeg";
 import { IoIosSearch } from "react-icons/io";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const Blogs: React.FC = () => {
+  const currentPath = usePathname();
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const goToPost = (id: string) => {
     router.push(`/blog/${id}`);
+    setLoading(true);
   };
+
+  useEffect(() => {
+    setLoading(false);
+  }, [currentPath]);
 
   const [filter, setFilter] = React.useState("All");
   const FilterOptions = ["All", "Design", "Events", "Investing", "Trends"];
