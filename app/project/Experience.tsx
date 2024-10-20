@@ -72,7 +72,7 @@ const Experience = () => {
           <h1 className="text-[#D6AB11] text-[3rem] tracking-[0.3em] text-center">
             EXPERIENCE HALTON
           </h1>
-          <p className="text-[1rem] leading-relaxed text-center text-balance mt-4 w-full max-w-[70rem] mx-auto">
+          <p className="text-[1rem] leading-[1.7] text-center text-balance mt-4 w-full max-w-[70rem] mx-auto">
             Halton Properties is a brand new private community in downtown
             Charlotte, consectetur adipiscing elit. Habent enim et bene longam
             et satis litigiosam disputationem. Stulti autem malorum memoria

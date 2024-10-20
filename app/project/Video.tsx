@@ -10,7 +10,7 @@ const Video = () => {
       <p className="text-[1rem] leading-relaxed text-center tracking-[0.4em]">
         A PERFECT PLACE TO CALL HOME
       </p>
-      <p className="text-[1rem] leading-relaxed text-center text-balance my-[2rem] w-full max-w-[70rem] mx-auto">
+      <p className="text-[1rem] leading-[1.7] text-center text-balance my-[2rem] w-full max-w-[70rem] mx-auto">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
