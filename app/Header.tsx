@@ -41,7 +41,7 @@ const Header = () => {
   };
 
   return (
-    <header className="container mx-auto flex justify-between items-center py-4 pt-8 md:px-20">
+    <header className="container mx-auto flex justify-between items-center py-4 mt-2 md:px-10 sticky top-2 z-20 bg-white/30 backdrop-blur-md md:rounded-[3rem]">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <Image src={Logo} alt="Ultimo Logo" priority={false} />
