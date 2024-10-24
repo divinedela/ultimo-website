@@ -7,9 +7,7 @@ import { motion } from "framer-motion";
 const Amenities = () => {
   return (
     <div className=" py-[4rem] container mx-auto  md:px-20 px-4 relative">
-      <h1 className=" text-[3rem] tracking-[0.3em] text-center">
-        AMENITIES
-      </h1>
+      <h1 className=" text-[3rem] tracking-[0.3em] text-center">AMENITIES</h1>
       <p className="text-[1rem] leading-relaxed text-center tracking-[0.4em]">
         ALL OF THE LUXURIES IN LIFE YOU DESERVE
       </p>
@@ -42,11 +40,12 @@ export const AmenitiesCard: React.FC<AmenitiesProps> = ({
   iconName,
   children,
 }) => {
+  console.log(title, icon, iconName, children);
   return (
     <motion.div
-    initial={{ scale: 1}}
-    whileHover={{ scale: 1.05 }}
-    transition={{ duration: 0.3 }}
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
       className={`p-[2rem] py-[4rem] flex flex-col space-y-4 items-center border border-[#28382B] ${
         type !== "primary" ? "bg-[#28382B] text-[#d9d8d7]" : ""
       }`}
