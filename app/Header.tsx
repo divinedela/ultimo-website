@@ -15,6 +15,8 @@ const Header = () => {
   const router = useRouter();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const storedTranslateX = sessionStorage.getItem("translateX");
+  const [translateX, setTranslateX] = useState(parseInt(storedTranslateX || "") || 0);
 
   const navList = [
     { name: "Home", link: "/" },
@@ -50,9 +52,11 @@ const Header = () => {
     setLoading(false);
   }, [currentPath]);
 
+  const initialX = 96 + 16;
+
   return (
     <>
-      {loading && <Loading />}
+      {/* {loading && <Loading />} */}
       <header className="container mx-auto flex justify-between items-center py-4 mt-2 md:px-10 sticky top-2 z-20 bg-white/30 backdrop-blur-md md:rounded-[3rem]">
         <div className="flex items-center space-x-2">
           <Link href="/">
@@ -60,21 +64,26 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden md:flex space-x-8">
-          {navList.map((navItem, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center group h-[2.5rem] relative"
-            >
-              <button
-                onClick={() => handleClick(navItem.link)}
-                onMouseEnter={() => handleMouseEnter(navItem.name)}
-                onMouseLeave={handleMouseLeave}
-                className={`hover:text-gray-800 text-[1rem] text-[#28382B] z-10 `}
+        <nav className="hidden lg:block">
+          <div className="flex space-x-[16px]">
+            {navList.map((navItem, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center group relative"
               >
-                {navItem.name}
-              </button>
-              <AnimatePresence>
+                <button
+                  onClick={() => {
+                    handleClick(navItem.link);
+                    setTranslateX(i * initialX);
+                    sessionStorage.setItem("translateX", `${i * initialX}`);
+                  }}
+                  onMouseEnter={() => handleMouseEnter(navItem.name)}
+                  onMouseLeave={handleMouseLeave}
+                  className={`hover:text-gray-800 w-[96px] text-[1rem] text-[#28382B] z-10 `}
+                >
+                  {navItem.name}
+                </button>
+                {/* <AnimatePresence>
                 {isActive(navItem.link) && (
                   <motion.p
                     key={currentPath}
@@ -91,7 +100,7 @@ const Header = () => {
                     <GoDotFill size={20} />
                   </motion.p>
                 )}
-              </AnimatePresence>
+              </AnimatePresence>*/}
 
               {!isActive(navItem.link) && hoveredItem === navItem.name && (
                 <motion.p
@@ -99,18 +108,29 @@ const Header = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
-                  className="text-[#D6AB11] absolute bottom-0 "
+                  className="text-[#D6AB11] absolute -bottom-4"
                 >
                   <GoDotFill size={20} />
                 </motion.p>
-              )}
-            </div>
-          ))}
+              )} 
+              </div>
+            ))}
+          </div>
+          <div className="h-2">
+            <motion.div
+              initial={{ x: 0 }}
+              animate={{ x: translateX }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="w-[96px] h-full grid place-items-center"
+            >
+              <GoDotFill size={20} className=" -translate-y-1 text-[#D6AB11]" />
+            </motion.div>
+          </div>
         </nav>
 
         <div className="hidden md:flex space-x-4">
           <Button>Book a tour</Button>
-          <Button type="secondary">Explore Property</Button>
+          <Button type="secondary" className="hidden md:block lg:hidden 2xl:block">Explore Property</Button>
         </div>
       </header>
     </>
