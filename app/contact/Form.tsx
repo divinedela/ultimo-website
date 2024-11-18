@@ -16,7 +16,7 @@ const Form = () => {
       </div>
       <div className=" space-y-2">
         <h3 className="text-[#28382B] text-xl font-[700]">Contact Us</h3>
-        <h3 className="text-[3rem] font-[700]">
+        <h3 className="text-[3rem] font-[700] leading-tight">
           Guiding your path to a{" "}
           <span className="text-[#348841] italic">new home</span>
         </h3>
