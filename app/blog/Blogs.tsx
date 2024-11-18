@@ -5,6 +5,10 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import FutureOfGreenLiving from "../../public/assets/img/Future_of_Green-Living.jpeg";
 import HomeTips from "../../public/assets/img/Tips_for_Sustainable-Home.png";
 import UltimoGardens from "../../public/assets/img/Ultimo-Gardens.jpeg";
+import SustainableLiving from "../../public/assets/img/Sustainable-Living.jpeg";
+import GrowingDemand from "../../public/assets/img/Growing-Demand.jpeg";
+import GreenHomes from "../../public/assets/img/Green-Homes.jpeg";
+import SolarPower from "../../public/assets/img/Solar-Power.jpeg";
 import { IoIosSearch } from "react-icons/io";
 import { usePathname, useRouter } from "next/navigation";
 import Loading from "../components/Loading";
@@ -63,23 +67,23 @@ const Blogs: React.FC = () => {
           onClick={() => goToPost("123")}
         />
         <CustomBlogCard
-          image={UltimoGardens}
-          title="Ultimo Gardens: Leading Eco-Luxury in Accra"
+          image={SustainableLiving}
+          title="How Sustainable Living Enhances Your Wellbeing"
           onClick={() => goToPost("789")}
         />
         <CustomBlogCard
-          image={FutureOfGreenLiving}
-          title="The Future of Green Living: Solar Power in Real Estate"
+          image={GrowingDemand}
+          title="The Growing Demand for Green Real Estate in Accra"
           onClick={() => goToPost("456")}
         />
         <CustomBlogCard
-          image={HomeTips}
-          title="5 Tips for a Sustainable Home"
+          image={GreenHomes}
+          title="Investing in Green Homes: A Smart Choice for the Future"
           onClick={() => goToPost("123")}
         />
         <CustomBlogCard
-          image={UltimoGardens}
-          title="Ultimo Gardens: Leading Eco-Luxury in Accra"
+          image={SolarPower}
+          title="The Future of Green Living: Solar Power in Real Estate"
           onClick={() => goToPost("789")}
         />
       </div>
@@ -107,7 +111,7 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
         src={image}
         priority={false}
         alt=""
-        className="h-full max-h-[12rem] object-cover rounded-xl"
+        className="h-full max-h-[16.25rem] object-cover rounded-xl"
       />
       <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
         <p>3rd October, 2024</p>

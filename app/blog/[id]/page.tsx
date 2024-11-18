@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import React from "react";
 import FutureOfGreenLiving from "../../../public/assets/img/Future_of_Green-Living.jpeg";
-import { CustomBlogCard } from "../Blogs";
+import { CustomBlogCard } from "./CustomBlogCard";
 
 const BlogDetails: React.FC = () => {
   const params = useParams();
