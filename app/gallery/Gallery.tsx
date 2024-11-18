@@ -1,4 +1,3 @@
-"use client";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import Interior from "../../public/assets/img/Interior-1.jpeg";

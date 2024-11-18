@@ -1,6 +1,4 @@
-"use client";
 import React from "react";
-import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Image, { StaticImageData } from "next/image";
 import FitnessCenter from "../../public/assets/img/Modern_Fitness-Center.jpeg";
 import ElectricVehicle from "../../public/assets/img/Electric_vehicle_charging-ports.jpeg";

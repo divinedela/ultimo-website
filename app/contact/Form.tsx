@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import ImageLike from "../../public/assets/img/form-bg.jpeg";

@@ -1,4 +1,3 @@
-"use client";
 
 import { DetailsCard } from "../components/DetailsCard";
 import Hero from "./Hero";
