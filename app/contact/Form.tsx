@@ -7,7 +7,7 @@ const Form = () => {
     <div className="grid lg:grid-cols-2 gap-[3rem] pb-[2rem] lg:pb-[6.5rem] pt-[2rem] container mx-auto  md:px-20 px-4 h-fit">
       <div className=" flex justify-end h-full">
         <Image
-          priority={false}
+          priority
           src={ImageLike}
           className="h-full max-h-[26rem] md:max-h-full object-cover rounded-[1.3rem]"
           alt=""

@@ -72,6 +72,7 @@ const Gallery = () => {
             <div className="w-full h-full z-10 absolute top-0 left-0 group-hover:bg-black/40 transition-all duration-200" />
             <Image
               src={image}
+              priority
               alt="Ultimo Gardens"
               className="w-full max-h-[20rem] h-full object-cover group-hover:scale-110 delay-100 transition-all duration-1000 ease-out"
             />
@@ -110,6 +111,7 @@ const Gallery = () => {
                   className="absolute inset-0 flex justify-center"
                 >
                   <Image
+                  priority
                     src={images[index]}
                     alt="Ultimo Gardens"
                     className=" h-full object-cover"

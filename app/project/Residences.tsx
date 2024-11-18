@@ -25,7 +25,7 @@ const Residences = () => {
         </div>
         <div className=" bg-slate-400">
           <Image
-            priority={false}
+            priority
             src={ImageLink}
             className="h-full w-full sm:min-h-[35rem] object-cover"
             alt=""
@@ -34,7 +34,7 @@ const Residences = () => {
       </div>
       <div className="flex justify-end lg:justify-center -translate-y-[5rem] lg:-translate-y-[5rem] xl:-translate-y-[10rem] pr-6">
         <Image
-          priority={false}
+          priority
           src={ImageLink2}
           className="w-full max-w-[5rem] md:max-w-[15rem] lg:max-w-[20rem] xl:max-w-[25rem] object-cover"
           alt=""

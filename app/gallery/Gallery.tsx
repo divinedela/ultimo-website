@@ -57,7 +57,7 @@ export const CustomImageCard: React.FC<CustomImageCardProps> = ({
     <div className="rounded-[1.3rem] flex flex-col gap-[1rem]">
       <Image
         src={image}
-        priority={false}
+        priority
         alt=""
         className="h-full max-h-[21.1rem] object-cover rounded-xl"
       />

@@ -57,7 +57,7 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
     <div className="rounded-[1.3rem] flex flex-col gap-[1rem] border-[0.5px] border-[#CFCFCF] overflow-hidden">
       <Image
         src={image}
-        priority={false}
+        priority
         alt=""
         className="h-[15.75rem] object-cover rounded-xl"
       />

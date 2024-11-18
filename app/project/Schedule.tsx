@@ -26,7 +26,7 @@ const Schedule = () => {
             </p>
             <div className="grid sm:grid-cols-2 pt-[2rem]">
               <Image
-                priority={false}
+                priority
                 src={ImageLike}
                 className="h-full w-full object-cover"
                 alt=""

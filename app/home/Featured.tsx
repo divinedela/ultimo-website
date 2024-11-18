@@ -66,7 +66,7 @@ export const CustomImageCard: React.FC<CustomImageCardProps> = ({
   return (
     <div className={`bg-white rounded-[1.3rem] flex flex-col gap-[1rem]`}>
       <Image
-        priority={false}
+        priority
         src={image}
         alt=""
         className=  {`h-[31.25rem] object-cover rounded-xl ${imageClassName}`}

@@ -12,7 +12,7 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
     <div className="rounded-[1rem] flex flex-col sm:flex-row gap-[1rem]">
       <Image
         src={image}
-        priority={false}
+        priority
         alt=""
         className="h-[4rem] sm:max-w-[5.5rem] w-full object-cover rounded-lg"
       />

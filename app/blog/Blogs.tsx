@@ -109,7 +109,7 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
     <div className="border-[0.5px] border-[#CFCFCF] p-6 rounded-[1.3rem] flex flex-col gap-[1rem]">
       <Image
         src={image}
-        priority={false}
+        priority
         alt=""
         className="h-full max-h-[16.25rem] object-cover rounded-xl"
       />

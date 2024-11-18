@@ -16,7 +16,7 @@ const BlogDetails: React.FC = () => {
         <div className=" border-[#CFCFCF] flex flex-col gap-[1rem] lg:col-span-3">
           <Image
             src={FutureOfGreenLiving}
-            priority={false}
+            priority
             alt=""
             className="h-full max-h-[19rem] object-cover rounded-xl"
           />

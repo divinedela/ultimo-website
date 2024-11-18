@@ -1,11 +1,11 @@
-
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import Logo from "../public/assets/img/ultimo_logo.png";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Button from "./components/Button";
 import Loading from "./components/Loading";
 
@@ -15,7 +15,9 @@ const Header = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const storedTranslateX = sessionStorage.getItem("translateX");
-  const [translateX, setTranslateX] = useState(parseInt(storedTranslateX || "") || 0);
+  const [translateX, setTranslateX] = useState(
+    parseInt(storedTranslateX || "") || 0
+  );
 
   const navList = [
     { name: "Home", link: "/" },
@@ -59,7 +61,7 @@ const Header = () => {
       <header className="container mx-auto flex justify-between items-center py-4 mt-2 md:px-10 sticky top-2 z-20 bg-white/30 backdrop-blur-md md:rounded-[3rem]">
         <div className="flex items-center space-x-2">
           <Link href="/">
-            <Image src={Logo} alt="Ultimo Logo" priority={false} />
+            <Image  src={Logo} alt="Ultimo Logo" priority />
           </Link>
         </div>
 
@@ -82,36 +84,18 @@ const Header = () => {
                 >
                   {navItem.name}
                 </button>
-                {/* <AnimatePresence>
-                {isActive(navItem.link) && (
+
+                {!isActive(navItem.link) && hoveredItem === navItem.name && (
                   <motion.p
                     key={currentPath}
-                    initial={{ opacity: 0, x: 0 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{
-                      opacity: 0,
-                      x: navList?.length / 2 > i ? 20 : -20,
-                      transition: { duration: 0.5 },
-                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ duration: 0.2, ease: "easeInOut" }}
-                    className="text-[#D6AB11] absolute bottom-0 "
+                    className="text-[#D6AB11] absolute -bottom-4"
                   >
                     <GoDotFill size={20} />
                   </motion.p>
                 )}
-              </AnimatePresence>*/}
-
-              {!isActive(navItem.link) && hoveredItem === navItem.name && (
-                <motion.p
-                  key={currentPath}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.2, ease: "easeInOut" }}
-                  className="text-[#D6AB11] absolute -bottom-4"
-                >
-                  <GoDotFill size={20} />
-                </motion.p>
-              )} 
               </div>
             ))}
           </div>
@@ -129,7 +113,12 @@ const Header = () => {
 
         <div className="hidden md:flex space-x-4">
           <Button>Book a tour</Button>
-          <Button type="secondary" className="hidden md:block lg:hidden 2xl:block">Explore Property</Button>
+          <Button
+            type="secondary"
+            className="hidden md:block lg:hidden 2xl:block"
+          >
+            Explore Property
+          </Button>
         </div>
       </header>
     </>
