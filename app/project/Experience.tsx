@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
-import { floorPlans } from "../dummy data/floor_plans";
+import { floorPlans } from "../components/dummy data/floor_plans";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 interface Feature {
@@ -28,7 +28,7 @@ const Experience = () => {
     if (floorPlans?.length > 0) {
       setCurrentFloor(floorPlans[0]);
     }
-  }, [floorPlans]);
+  }, []);
 
   const handleNext = () => {
     if (currentFloor) {

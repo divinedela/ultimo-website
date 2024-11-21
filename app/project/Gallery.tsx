@@ -2,9 +2,6 @@
 
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import UltimoGardens from "../../public/assets/img/Ultimo-Gardens.jpeg";
-import FutureOfGreenLiving from "../../public/assets/img/Future_of_Green-Living.jpeg";
-import HomeTips from "../../public/assets/img/Tips_for_Sustainable-Home.png";
 import {
   TfiAlignRight,
   TfiAngleLeft,
@@ -31,14 +28,14 @@ const Gallery = () => {
   };
 
   const images = [
-    UltimoGardens,
-    FutureOfGreenLiving,
-    HomeTips,
-    UltimoGardens,
-    FutureOfGreenLiving,
-    HomeTips,
-    UltimoGardens,
-    FutureOfGreenLiving,
+    "/assets/img/Ultimo-Gardens.jpeg",
+    "/assets/img/Future_of_Green-Living.jpeg",
+    "/assets/img/Tips_for_Sustainable-Home.png",
+    "/assets/img/Ultimo-Gardens.jpeg",
+    "/assets/img/Future_of_Green-Living.jpeg",
+    "/assets/img/Tips_for_Sustainable-Home.png",
+    "/assets/img/Ultimo-Gardens.jpeg",
+    "/assets/img/Future_of_Green-Living.jpeg",
   ];
 
   const handleNext = () => {
@@ -74,7 +71,10 @@ const Gallery = () => {
               src={image}
               priority
               alt="Ultimo Gardens"
-              className="w-full max-h-[20rem] h-full object-cover group-hover:scale-110 delay-100 transition-all duration-1000 ease-out"
+              width={1000}
+              height={320}
+              layout="responsive"
+              className="w-full min-h-[20rem] max-h-[20rem] object-cover group-hover:scale-110 delay-100 transition-all duration-1000 ease-out"
             />
           </div>
         ))}
@@ -111,10 +111,13 @@ const Gallery = () => {
                   className="absolute inset-0 flex justify-center"
                 >
                   <Image
-                  priority
+                    priority
                     src={images[index]}
+                    width={1000}
+                    height={1500}
+                    layout="responsive"
                     alt="Ultimo Gardens"
-                    className=" h-full object-cover"
+                    className="object-cover"
                   />
                 </motion.div>
               </AnimatePresence>

@@ -2,13 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import FutureOfGreenLiving from "../../public/assets/img/Future_of_Green-Living.jpeg";
-import HomeTips from "../../public/assets/img/Tips_for_Sustainable-Home.png";
-import UltimoGardens from "../../public/assets/img/Ultimo-Gardens.jpeg";
-import SustainableLiving from "../../public/assets/img/Sustainable-Living.jpeg";
-import GrowingDemand from "../../public/assets/img/Growing-Demand.jpeg";
-import GreenHomes from "../../public/assets/img/Green-Homes.jpeg";
-import SolarPower from "../../public/assets/img/Solar-Power.jpeg";
 import { IoIosSearch } from "react-icons/io";
 import { usePathname, useRouter } from "next/navigation";
 import Loading from "../components/Loading";
@@ -57,34 +50,34 @@ const Blogs: React.FC = () => {
 
       <div className="grid lg:grid-cols-2 gap-[1.5rem] mt-[3rem]">
         <CustomBlogCard
-          image={FutureOfGreenLiving}
+          image="/assets/img/Future_of_Green-Living.jpeg"
           title="The Future of Green Living: Solar Power in Real Estate"
-          onClick={() => goToPost("456")}
+          onClick={() => goToPost("1")}
         />
         <CustomBlogCard
-          image={HomeTips}
+          image="/assets/img/Tips_for_Sustainable-Home.png"
           title="5 Tips for a Sustainable Home"
-          onClick={() => goToPost("123")}
+          onClick={() => goToPost("1")}
         />
         <CustomBlogCard
-          image={SustainableLiving}
+          image="/assets/img/Sustainable-Living.jpeg"
           title="How Sustainable Living Enhances Your Wellbeing"
-          onClick={() => goToPost("789")}
+          onClick={() => goToPost("1")}
         />
         <CustomBlogCard
-          image={GrowingDemand}
+          image="/assets/img/Growing-Demand.jpeg"
           title="The Growing Demand for Green Real Estate in Accra"
-          onClick={() => goToPost("456")}
+          onClick={() => goToPost("1")}
         />
         <CustomBlogCard
-          image={GreenHomes}
+          image="/assets/img/Green-Homes.jpeg"
           title="Investing in Green Homes: A Smart Choice for the Future"
-          onClick={() => goToPost("123")}
+          onClick={() => goToPost("1")}
         />
         <CustomBlogCard
-          image={SolarPower}
+          image="/assets/img/Solar-Power.jpeg"
           title="The Future of Green Living: Solar Power in Real Estate"
-          onClick={() => goToPost("789")}
+          onClick={() => goToPost("1")}
         />
       </div>
 
@@ -110,8 +103,11 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
       <Image
         src={image}
         priority
+        width={1000}
+        height={260}
         alt=""
-        className="h-full max-h-[16.25rem] object-cover rounded-xl"
+        layout="responsive"
+        className="max-h-[16.25rem] object-cover rounded-xl"
       />
       <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
         <p>3rd October, 2024</p>

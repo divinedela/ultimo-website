@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./home";
+import Home from "./components/home";
 
 const HomePage = () => {
   return (
@@ -8,5 +8,6 @@ const HomePage = () => {
     </div>
   );
 };
+
 
 export default HomePage;

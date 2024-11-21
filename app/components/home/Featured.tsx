@@ -1,9 +1,5 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import FitnessCenter from "../../public/assets/img/Modern_Fitness-Center.jpeg";
-import ElectricVehicle from "../../public/assets/img/Electric_vehicle_charging-ports.jpeg";
-import InverterACs from "../../public/assets/img/Inverter_ACs_and_LED-bulbs.jpeg";
-import SolarPower from "../../public/assets/img/Solar_Power-Generation.png";
 
 const Featured = () => {
   return (
@@ -25,21 +21,21 @@ const Featured = () => {
           <CustomImageCard
             span="Solar power generation"
             description="provides clean, renewable energy for a sustainable living experience."
-            image={FitnessCenter}
+            image="/assets/img/Modern_Fitness-Center.jpeg"
           />
           <CustomImageCard
             span="Electric vehicle charging ports"
-            image={ElectricVehicle}
+            image="/assets/img/Electric_vehicle_charging-ports.jpeg"
             description="support eco-friendly transportation right at home."
           />
           <CustomImageCard
             span="Inverter ACs and LED bulbs"
-            image={InverterACs}
+            image="/assets/img/Inverter_ACs_and_LED-bulbs.jpeg"
             description="ensure low power consumption, enhancing energy efficiency."
           />
           <CustomImageCard
             span="Segregated waste system"
-            image={SolarPower}
+            image="/assets/img/Solar_Power-Generation.png"
             description="promote recycling and responsible waste management for a greener community."
             imageClassName="object-right"
           />
@@ -68,8 +64,11 @@ export const CustomImageCard: React.FC<CustomImageCardProps> = ({
       <Image
         priority
         src={image}
+        width={1000}
+        height={500}
         alt=""
-        className=  {`h-[31.25rem] object-cover rounded-xl ${imageClassName}`}
+        layout="responsive"
+        className={`min-h-[31.25rem] object-cover rounded-xl ${imageClassName}`}
       />
       <p className="text-[#5B6B5D] text-xl">
         <span className="font-[600] text-[#28382B] text-inherit">{span}</span>{" "}

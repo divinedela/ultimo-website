@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import ImageLike from "../../public/assets/img/form-bg.jpeg";
 
 const Form = () => {
   return (
@@ -8,8 +7,11 @@ const Form = () => {
       <div className=" flex justify-end h-full">
         <Image
           priority
-          src={ImageLike}
-          className="h-full max-h-[26rem] md:max-h-full object-cover rounded-[1.3rem]"
+          src="/assets/img/form-bg.jpeg"
+          className="max-h-[26rem] md:max-h-full object-cover rounded-[1.3rem]"
+          width={1000}
+          height={1000}
+          layout="responsive"
           alt=""
         />
       </div>

@@ -1,9 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import FutureOfGreenLiving from "../../public/assets/img/Future_of_Green-Living.jpeg";
-import HomeTips from "../../public/assets/img/Tips_for_Sustainable-Home.png";
-import UltimoGardens from "../../public/assets/img/Ultimo-Gardens.jpeg";
 
 const Blogs = () => {
   return (
@@ -27,15 +24,15 @@ const Blogs = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] mt-[3rem]">
         <CustomBlogCard
-          image={FutureOfGreenLiving}
+          image="/assets/img/Future_of_Green-Living.jpeg"
           title="The Future of Green Living: Solar Power in Real Estate"
         />
         <CustomBlogCard
-          image={HomeTips}
+          image="/assets/img/Tips_for_Sustainable-Home.png"
           title="5 Tips for a Sustainable Home"
         />
         <CustomBlogCard
-          image={UltimoGardens}
+          image="/assets/img/Ultimo-Gardens.jpeg"
           title="Ultimo Gardens: Leading Eco-Luxury in Accra"
         />
       </div>
@@ -59,7 +56,10 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
         src={image}
         priority
         alt=""
-        className="h-[15.75rem] object-cover rounded-xl"
+        width={1920}
+        height={252}
+        className="object-cover max-h-[16.25rem] rounded-xl"
+        layout="responsive"
       />
       <div className="p-6 rounded-b-xl mt-[-1.6rem]">
         <div className="text-sm text-[#5B6B5D] flex justify-between items-center">

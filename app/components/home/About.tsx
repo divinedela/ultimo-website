@@ -1,7 +1,6 @@
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Image from "next/image";
-import ImageLike from "../../public/assets/img/About_Ultimo-Gardens.jpeg";
 
 const About = () => {
   return (
@@ -31,9 +30,12 @@ const About = () => {
       <div className=" flex justify-end">
         <Image
           priority
-          src={ImageLike}
-          className="h-full max-h-[26rem] object-cover rounded-[1.3rem]"
+          src="/assets/img/About_Ultimo-Gardens.jpeg"
+          className="max-h-[26rem] object-cover rounded-[1.3rem]"
+          width={1000}
+          height={416}
           alt=""
+          layout="responsive"
         />
       </div>
     </div>

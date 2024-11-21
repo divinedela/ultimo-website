@@ -4,20 +4,19 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
-import Logo from "../public/assets/img/ultimo_logo.png";
 import { motion } from "framer-motion";
 import Button from "./components/Button";
-import Loading from "./components/Loading";
 
 const Header = () => {
   const currentPath = usePathname();
   const router = useRouter();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const storedTranslateX = sessionStorage.getItem("translateX");
-  const [translateX, setTranslateX] = useState(
-    parseInt(storedTranslateX || "") || 0
-  );
+  const [translateX, setTranslateX] = useState(0);
+
+  useEffect(() => {
+    const storedTranslateX = sessionStorage.getItem("translateX");
+    setTranslateX(parseInt(storedTranslateX ?? "0"));
+  }, []);
 
   const navList = [
     { name: "Home", link: "/" },
@@ -45,13 +44,8 @@ const Header = () => {
   };
 
   const handleClick = (path: string) => {
-    setLoading(true);
     router.push(path);
   };
-
-  useEffect(() => {
-    setLoading(false);
-  }, [currentPath]);
 
   const initialX = 96 + 16;
 
@@ -61,7 +55,15 @@ const Header = () => {
       <header className="container mx-auto flex justify-between items-center py-4 mt-2 md:px-10 sticky top-2 z-20 bg-white/30 backdrop-blur-md md:rounded-[3rem]">
         <div className="flex items-center space-x-2">
           <Link href="/">
-            <Image  src={Logo} alt="Ultimo Logo" priority />
+            <Image
+              priority
+              width={213}
+              height={48}
+              className="max-w-[213px] min-h-[48px]"
+              layout="responsive"
+              src="/assets/img/ultimo_logo.png"
+              alt="logo"
+            />
           </Link>
         </div>
 
