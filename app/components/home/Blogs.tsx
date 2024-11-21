@@ -1,5 +1,4 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 const Blogs = () => {
@@ -44,7 +43,7 @@ export default Blogs;
 
 interface CustomBlogCardProps {
   title: string;
-  image: string | StaticImageData;
+  image: string;
 }
 export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
   image,
@@ -52,14 +51,10 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
 }) => {
   return (
     <div className="rounded-[1.3rem] flex flex-col gap-[1rem] border-[0.5px] border-[#CFCFCF] overflow-hidden">
-      <Image
+      <img
         src={image}
-        priority
+        className="object-cover h-full max-h-[16.25rem] rounded-xl"
         alt=""
-        width={1920}
-        height={252}
-        className="object-cover max-h-[16.25rem] rounded-xl"
-        layout="responsive"
       />
       <div className="p-6 rounded-b-xl mt-[-1.6rem]">
         <div className="text-sm text-[#5B6B5D] flex justify-between items-center">

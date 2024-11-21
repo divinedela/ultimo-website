@@ -1,17 +1,12 @@
-import Image from "next/image";
 import React from "react";
 
 const Form = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-[3rem] pb-[2rem] lg:pb-[6.5rem] pt-[2rem] container mx-auto  md:px-20 px-4 h-fit">
       <div className=" flex justify-end h-full">
-        <Image
-          priority
+        <img
           src="/assets/img/form-bg.jpeg"
-          className="max-h-[26rem] md:max-h-full object-cover rounded-[1.3rem]"
-          width={1000}
-          height={1000}
-          layout="responsive"
+          className="h-full max-h-[26rem] md:max-h-full object-cover rounded-[1.3rem]"
           alt=""
         />
       </div>

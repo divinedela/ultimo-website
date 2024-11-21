@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image, { StaticImageData } from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
 import { usePathname, useRouter } from "next/navigation";
@@ -90,7 +89,7 @@ export default Blogs;
 
 interface CustomBlogCardProps {
   title: string;
-  image: string | StaticImageData;
+  image: string ;
   onClick?: () => void;
 }
 export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
@@ -100,14 +99,10 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
 }) => {
   return (
     <div className="border-[0.5px] border-[#CFCFCF] p-6 rounded-[1.3rem] flex flex-col gap-[1rem]">
-      <Image
+      <img
         src={image}
-        priority
-        width={1000}
-        height={260}
         alt=""
-        layout="responsive"
-        className="max-h-[16.25rem] object-cover rounded-xl"
+        className="h-full max-h-[16.25rem] object-cover rounded-xl"
       />
       <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
         <p>3rd October, 2024</p>

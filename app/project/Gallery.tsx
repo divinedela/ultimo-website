@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React, { useRef, useState } from "react";
 import {
   TfiAlignRight,
@@ -67,14 +66,10 @@ const Gallery = () => {
             }}
           >
             <div className="w-full h-full z-10 absolute top-0 left-0 group-hover:bg-black/40 transition-all duration-200" />
-            <Image
+            <img
               src={image}
-              priority
               alt="Ultimo Gardens"
-              width={1000}
-              height={320}
-              layout="responsive"
-              className="w-full min-h-[20rem] max-h-[20rem] object-cover group-hover:scale-110 delay-100 transition-all duration-1000 ease-out"
+              className="w-full h-full min-h-[20rem] max-h-[20rem] object-cover group-hover:scale-110 delay-100 transition-all duration-1000 ease-out"
             />
           </div>
         ))}
@@ -110,14 +105,10 @@ const Gallery = () => {
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className="absolute inset-0 flex justify-center"
                 >
-                  <Image
-                    priority
+                  <img
                     src={images[index]}
-                    width={1000}
-                    height={1500}
-                    layout="responsive"
                     alt="Ultimo Gardens"
-                    className="object-cover"
+                    className="object-cover w-full h-full"
                   />
                 </motion.div>
               </AnimatePresence>

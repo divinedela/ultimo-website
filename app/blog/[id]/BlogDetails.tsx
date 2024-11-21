@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import { CustomBlogCard } from "./CustomBlogCard";
 
@@ -23,14 +22,10 @@ const BlogDetails: React.FC<BlogDetailsProps> = ({ id }) => {
     <div className="bg-white">
       <div className="pb-[6rem] pt-[2rem] container mx-auto  md:px-20 px-4 grid grid-cols-1 lg:grid-cols-5 gap-[1.5rem] md:gap-[4rem]">
         <div className=" border-[#CFCFCF] flex flex-col gap-[1rem] lg:col-span-3">
-          <Image
+          <img
             src="/assets/img/Future_of_Green-Living.jpeg"
-            priority
-            width={1000}
-            height={304}
             alt=""
-            layout="responsive"
-            className=" max-h-[19rem] object-cover rounded-xl"
+            className="h-full max-h-[19rem] object-cover rounded-xl"
           />
           <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
             <p>3rd October, 2024</p>

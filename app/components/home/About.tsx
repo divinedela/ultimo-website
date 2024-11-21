@@ -1,6 +1,5 @@
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import Image from "next/image";
 
 const About = () => {
   return (
@@ -28,14 +27,10 @@ const About = () => {
         </button>
       </div>
       <div className=" flex justify-end">
-        <Image
-          priority
+        <img
           src="/assets/img/About_Ultimo-Gardens.jpeg"
-          className="max-h-[26rem] object-cover rounded-[1.3rem]"
-          width={1000}
-          height={416}
+          className="h-full max-h-[26rem] object-cover rounded-[1.3rem]"
           alt=""
-          layout="responsive"
         />
       </div>
     </div>

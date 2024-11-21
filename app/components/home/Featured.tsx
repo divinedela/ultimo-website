@@ -1,5 +1,4 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
 
 const Featured = () => {
   return (
@@ -50,7 +49,7 @@ export default Featured;
 interface CustomImageCardProps {
   description?: string;
   span?: string;
-  image: string | StaticImageData;
+  image: string;
   imageClassName?: string;
 }
 export const CustomImageCard: React.FC<CustomImageCardProps> = ({
@@ -61,14 +60,10 @@ export const CustomImageCard: React.FC<CustomImageCardProps> = ({
 }) => {
   return (
     <div className={`bg-white rounded-[1.3rem] flex flex-col gap-[1rem]`}>
-      <Image
-        priority
+      <img
         src={image}
-        width={1000}
-        height={500}
         alt=""
-        layout="responsive"
-        className={`min-h-[31.25rem] object-cover rounded-xl ${imageClassName}`}
+        className={`h-full min-h-[31.25rem] object-cover rounded-xl ${imageClassName}`}
       />
       <p className="text-[#5B6B5D] text-xl">
         <span className="font-[600] text-[#28382B] text-inherit">{span}</span>{" "}

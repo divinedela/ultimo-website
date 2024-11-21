@@ -1,8 +1,7 @@
-import Image, { StaticImageData } from "next/image";
 
 interface CustomBlogCardProps {
   title: string;
-  image: string | StaticImageData;
+  image: string;
 }
 export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
   image,
@@ -10,14 +9,10 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
 }) => {
   return (
     <div className="rounded-[1rem] flex flex-col sm:flex-row gap-[1rem]">
-      <Image
+      <img
         src={image}
-        priority
-        width={1000}
-        height={64}
         alt=""
-        layout="responsive"
-        className="max-h-[4rem] sm:max-w-[5.5rem] w-full object-cover rounded-lg"
+        className="h-full max-h-[4rem] sm:max-w-[5.5rem] w-full object-cover rounded-lg"
       />
       <div className="w-full flex flex-col justify-between">
         <div className="text-sm text-[#5B6B5D] flex justify-between items-center">

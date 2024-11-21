@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -55,12 +54,8 @@ const Header = () => {
       <header className="container mx-auto flex justify-between items-center py-4 mt-2 md:px-10 sticky top-2 z-20 bg-white/30 backdrop-blur-md md:rounded-[3rem]">
         <div className="flex items-center space-x-2">
           <Link href="/">
-            <Image
-              priority
-              width={213}
-              height={48}
-              className="max-w-[213px] min-h-[48px]"
-              layout="responsive"
+            <img
+              className="w-full h-full max-w-[213px] min-h-[48px]"
               src="/assets/img/ultimo_logo.png"
               alt="logo"
             />

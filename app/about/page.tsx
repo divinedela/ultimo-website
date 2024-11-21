@@ -1,9 +1,5 @@
-
 import { DetailsCard } from "../components/DetailsCard";
 import Hero from "./Hero";
-import FlowerLotus from "../../public/assets/icons/Windmill.png";
-import PenNibStraight from "../../public/assets/icons/PenNibStraight.png";
-import Windmill from "../../public/assets/icons/Windmill.png";
 
 const AboutPage = () => {
   return (
@@ -12,7 +8,7 @@ const AboutPage = () => {
       <div className="container mx-auto  md:px-20 py-20 px-4">
         <div className="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3 md:gap-[1.5rem] mt-[3rem]">
           <DetailsCard
-            imageSrc={Windmill}
+            imageSrc="/assets/icons/FlowerLotus.png"
             title="Crafted for a sustainable lifestyle"
           >
             Ultimo Gardens is developed by MM Partners Limited, a subsidiary of
@@ -20,7 +16,7 @@ const AboutPage = () => {
             residential and commercial properties in Accra since 2007.
           </DetailsCard>
           <DetailsCard
-            imageSrc={PenNibStraight}
+            imageSrc="/assets/icons/PenNibStraight.png"
             title="A testament to design excellence"
           >
             Our portfolio includes over 50 high-quality units, with our latest
@@ -28,7 +24,7 @@ const AboutPage = () => {
             spaces in North Legon.
           </DetailsCard>
           <DetailsCard
-            imageSrc={FlowerLotus}
+            imageSrc="/assets/icons/Windmill.png"
             title="Where quality meets sustainability"
           >
             At Harvey, we focus on value-driven properties in prime locations,

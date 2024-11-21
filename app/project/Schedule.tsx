@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { TbPhoneCall } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
@@ -24,13 +23,9 @@ const Schedule = () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div className="grid sm:grid-cols-2 pt-[2rem]">
-              <Image
-                priority
+              <img
                 src="/assets/img/profile-woman.png"
-                width={1000}
-                height={1000}
-                layout="responsive"
-                className="object-cover"
+                className="object-cover h-full w-full"
                 alt=""
               />
               <div className="flex flex-col gap-2 justify-center p-[2rem]">
