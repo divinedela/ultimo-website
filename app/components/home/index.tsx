@@ -12,9 +12,11 @@ const Home = () => {
       </div>
       <div className="px-4 sm:px-8 lg:px-[6rem]">
         <About />
-        <Featured />
-        <Blogs />
       </div>
+      <div className="pl-4 sm:pl-8 lg:px-[6rem]">
+        <Featured />
+      </div>
+      <Blogs />
     </div>
   );
 };
