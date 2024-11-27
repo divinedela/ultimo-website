@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
             ? "bg-[#348841] border-[#348841] text-white hover:bg-green-700 hover:border-green-700"
             : "border-[#D6AB11] text-[#D6AB11] hover:bg-[#D6AB11] hover:text-white"
         } 
-       px-[2rem] py-[1rem] rounded-xl font-[700] text-[1rem] border-2 transition-all w-fit`,
+       px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-[10px] font-[700] text-[1rem] border-2 transition-all w-fit`,
         className
       )}
     >
