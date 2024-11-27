@@ -6,11 +6,15 @@ import Blogs from "./Blogs";
 
 const Home = () => {
   return (
-    <div className="py-[1rem] bg-white">
-      <Hero />
-      <About />
-      <Featured />
-      <Blogs />
+    <div className="2xl:max-w-[1440px] mx-auto bg-white">
+      <div className="lg:px-8">
+        <Hero />
+      </div>
+      <div className="px-4 sm:px-8">
+        <About />
+        <Featured />
+        <Blogs />
+      </div>
     </div>
   );
 };

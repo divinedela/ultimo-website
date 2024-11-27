@@ -48,9 +48,9 @@ const Header = () => {
   };
 
   return (
-    <>
+    <div className="px-4 sm:px-8 2xl:max-w-[1440px] mx-auto sticky top-2 z-20">
       {/* {loading && <Loading />} */}
-      <header className="2xl:max-w-[1440px] mx-auto flex justify-between items-center py-2 px-4 sm:px-8 sticky top-2 z-20 bg-white/30 backdrop-blur-md md:rounded-[3rem]">
+      <header className="flex justify-between items-center py-2 bg-white/30 backdrop-blur-md rounded-xl md:rounded-[3rem]">
         <div className="flex items-center space-x-2 xl:ml-[55px] max-sm:ml-[12px]">
           <Link href="/">
             <Image
@@ -116,17 +116,14 @@ const Header = () => {
 
         <div className="hidden lg:flex space-x-4 xl:mr-[55px]">
           <Button>Book a tour</Button>
-          <Button
-            type="secondary"
-            className="hidden 1147px:block"
-          >
+          <Button type="secondary" className="hidden 1147px:block">
             Explore Property
           </Button>
         </div>
 
         <Button className="lg:hidden mr-[12px]">Menu</Button>
       </header>
-    </>
+    </div>
   );
 };
 

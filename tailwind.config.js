@@ -10,6 +10,9 @@ module.exports = {
       },
       screens: {
         "1147px": "1147px"
+      },
+      minHeight: {
+        'phone': 'calc(100vh - 70px)',
       }
     },
   },

@@ -11,7 +11,7 @@ const WelcomeNote = () => {
 
   return (
     <>
-      <div className="hidden md:block absolute bottom-[2rem] left-[1.5rem] z-10 text-white bg-black/30 rounded-[2rem] p-[2rem] backdrop-blur-sm w-full max-w-[37rem]">
+      <div className="lg:absolute bottom-[2rem] left-[1.5rem] z-10 text-white bg-black/30 rounded-[2rem] p-4 lg:p-[2rem] backdrop-blur-sm w-full max-w-[37rem]">
         <h2 className="text-[1rem] font-[700]">Welcome to Ultimo Gardens</h2>
         <div className="flex gap-3 gap-y-0 flex-wrap">
           {headingWords.map((word, index) => (
@@ -44,12 +44,12 @@ const WelcomeNote = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="mt-5 flex justify-between w-full gap-3"
+              className="mt-5 flex justify-between w-full gap-[10px]"
             >
-              <Button className="w-full" onClick={() => setShowForm(true)}>
+              <Button className="w-full px-3" onClick={() => setShowForm(true)}>
                 Book a tour
               </Button>
-              <Button className="w-full" type="secondary">
+              <Button className="w-full px-3 text-nowrap" type="secondary">
                 Explore Property
               </Button>
             </motion.div>
@@ -80,7 +80,7 @@ export const CustomHeading: React.FC<CustomHeadingProps> = ({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut", delay: delay || 0.2 }}
-      className={`text-[2.5rem] font-bold ${className}`}
+      className={`text-[2rem] sm:text-[2.5rem] font-bold ${className}`}
     >
       {children}
     </motion.div>

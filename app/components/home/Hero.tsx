@@ -47,34 +47,40 @@ const Hero = () => {
   };
 
   return (
-    <div className="px-6">
-      <div className="bg-slate-500 rounded-lg sm:rounded-[3rem] h-full relative group overflow-hidden container mx-auto">
-        <video ref={videoRef} className="w-full" loop>
+    <div className="pt-3 mb-[7.5rem]">
+      <div className="bg-slate-500 lg:rounded-[3rem] h-full max-lg:min-h-phone relative overflow-hidden">
+        <video
+          ref={videoRef}
+          className="w-full max-lg:object-cover max-lg:min-h-phone"
+          loop
+        >
           <source src="/assets/video/hero_video.mp4" type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
 
-        {/* Custom Play/Pause Button */}
-        <div className=" absolute right-[3rem] bottom-[2rem] flex gap-5 items-center text-white">
-          <div
-            onClick={handleVideoController}
-            className="flex justify-center items-center cursor-pointer w-fit h-fit"
-          >
-            {videoController ? <LuPause size={30} /> : <LuPlay size={30} />}
+        <div className="p-4 absolute bottom-0 w-full max-lg:min-h-80 max-lg:flex max-lg:flex-col max-lg:gap-4">
+          {/* Custom Play/Pause Button */}
+          <div className=" lg:absolute right-[3rem] bottom-[2rem] flex gap-5 items-center text-white max-lg:self-end">
+            <div
+              onClick={handleVideoController}
+              className="flex justify-center items-center cursor-pointer w-fit h-fit"
+            >
+              {videoController ? <LuPause size={30} /> : <LuPlay size={30} />}
+            </div>
+            <div
+              onClick={handleVideoMute}
+              className="flex justify-center items-center cursor-pointer w-fit h-fit"
+            >
+              {videoMute ? (
+                <PiSpeakerSimpleNone size={30} />
+              ) : (
+                <PiSpeakerSimpleSlash size={30} />
+              )}
+            </div>
           </div>
-          <div
-            onClick={handleVideoMute}
-            className="flex justify-center items-center cursor-pointer w-fit h-fit"
-          >
-            {videoMute ? (
-              <PiSpeakerSimpleNone size={30} />
-            ) : (
-              <PiSpeakerSimpleSlash size={30} />
-            )}
-          </div>
-        </div>
 
-        <WelcomeNote />
+          <WelcomeNote />
+        </div>
       </div>
     </div>
   );
