@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="2xl:max-w[1440px] mx-auto pt-6 pb-[57px] md:px-8 px-4 space-y-4 flex flex-col">
+    <footer className="2xl:max-w-[1440px] mx-auto pt-6 pb-[57px] md:px-8 px-4 space-y-4 flex flex-col">
       <Image
         priority
         width={213}
