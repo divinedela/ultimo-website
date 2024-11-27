@@ -34,12 +34,12 @@ const Footer = () => {
         priority
         width={213}
         height={48}
-        className="max-w-[213px] xl:ml-[80px] mt-4 lg:mt-0 order-1 lg:order-none"
+        className="max-w-[213px] xl:ml-[5rem] mt-4 lg:mt-0 order-1 lg:order-none"
         layout="responsive"
         src="/assets/img/ultimo_logo.png"
         alt="logo"
       />
-      <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-[1rem] lg:items-center text-[#28382B] xl:mx-[80px]">
+      <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-[1rem] lg:items-center text-[#28382B] xl:mx-[5rem]">
         <p className="text-xs hidden lg:block">
           © Ultimo Gardens, 2024 All Rights Reserved
         </p>

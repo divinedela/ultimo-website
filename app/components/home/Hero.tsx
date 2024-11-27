@@ -47,7 +47,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="pt-3 mb-[7.5rem]">
+    <div className="pt-3 mb-[3rem] sm:mb-[7.5rem]">
       <div className="bg-slate-500 lg:rounded-[3rem] h-full max-lg:min-h-phone relative overflow-hidden">
         <video
           ref={videoRef}

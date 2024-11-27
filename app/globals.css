@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Effra Trial";
-  src: url("/fonts/EffraTrial.woff2") format("woff2"),
-    /* Adjust the path */ url("/fonts/EffraTrial.woff") format("woff"); /* Adjust the path */
-  font-weight: normal;
+  font-family: "Effra";
+  src: url("/fonts/Effra_Trial_Rg.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Effra";
+  src: url("/fonts/Effra_Trial_Bd.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Effra", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Effra", sans-serif;
+  font-weight: 400;
 }
 
 * {
   scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Effra Trial", "Inter", sans-serif; /* Use Effra as the primary font */
 }
 
 /* Loader */
@@ -30,11 +42,19 @@ body {
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

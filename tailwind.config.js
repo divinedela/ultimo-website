@@ -7,13 +7,14 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Effra Trial", "Inter", "sans-serif"],
+        effra: ["Effra", "sans-serif"],
       },
       screens: {
-        "1147px": "1147px"
+        "1147px": "1147px",
       },
       minHeight: {
-        'phone': 'calc(100vh - 70px)',
-      }
+        phone: "calc(100vh - 70px)",
+      },
     },
   },
   daisyui: {

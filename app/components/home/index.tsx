@@ -10,7 +10,7 @@ const Home = () => {
       <div className="lg:px-8">
         <Hero />
       </div>
-      <div className="px-4 sm:px-8">
+      <div className="px-4 sm:px-8 lg:px-[6rem]">
         <About />
         <Featured />
         <Blogs />
