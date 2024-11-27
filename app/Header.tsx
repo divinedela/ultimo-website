@@ -11,20 +11,20 @@ const Header = () => {
   const currentPath = usePathname();
   const router = useRouter();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const [translateX, setTranslateX] = useState(0);
+  const [translateX, setTranslateX] = useState(10.9);
 
   useEffect(() => {
     const storedTranslateX = sessionStorage.getItem("translateX");
-    setTranslateX(parseInt(storedTranslateX ?? "0"));
+    setTranslateX(parseInt(storedTranslateX ?? "10.9"));
   }, []);
 
   const navList = [
-    { name: "Home", link: "/" },
-    { name: "The Project", link: "/project" },
-    { name: "About Us", link: "/about" },
-    { name: "Gallery", link: "/gallery" },
-    { name: "Blog", link: "/blog" },
-    { name: "Contact Us", link: "/contact" },
+    { name: "Home", link: "/", translate: 10.9 },
+    { name: "The Project", link: "/project", translate: 104.2 },
+    { name: "About Us", link: "/about", translate: 204.6 },
+    { name: "Gallery", link: "/gallery", translate: 291.3 },
+    { name: "Blog", link: "/blog", translate: 357.1 },
+    { name: "Contact Us", link: "/contact", translate: 439.7 },
   ];
 
   const isActive = (link: string) => {
@@ -47,19 +47,17 @@ const Header = () => {
     router.push(path);
   };
 
-  const initialX = 96 + 16;
-
   return (
     <>
       {/* {loading && <Loading />} */}
-      <header className="container mx-auto flex justify-between items-center py-4 mt-2 md:px-10 sticky top-2 z-20 bg-white/30 backdrop-blur-md md:rounded-[3rem]">
-        <div className="flex items-center space-x-2">
+      <header className="2xl:max-w-[1440px] mx-auto flex justify-between items-center py-2 px-4 sm:px-8 sticky top-2 z-20 bg-white/30 backdrop-blur-md md:rounded-[3rem]">
+        <div className="flex items-center space-x-2 xl:ml-[55px] max-sm:ml-[12px]">
           <Link href="/">
             <Image
               priority
               width={213}
               height={48}
-              className="max-w-[213px] min-h-[48px]"
+              className="max-[141px] sm:max-w-[213px] min-h-[32px] sm:min-h-[48px]"
               layout="responsive"
               src="/assets/img/ultimo_logo.png"
               alt="logo"
@@ -67,8 +65,8 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden lg:block">
-          <div className="flex space-x-[16px]">
+        <nav className="hidden lg:block ">
+          <div className="flex gap-6">
             {navList.map((navItem, i) => (
               <div
                 key={i}
@@ -77,12 +75,15 @@ const Header = () => {
                 <button
                   onClick={() => {
                     handleClick(navItem.link);
-                    setTranslateX(i * initialX);
-                    sessionStorage.setItem("translateX", `${i * initialX}`);
+                    setTranslateX(navItem.translate);
+                    sessionStorage.setItem(
+                      "translateX",
+                      `${navItem.translate}`
+                    );
                   }}
                   onMouseEnter={() => handleMouseEnter(navItem.name)}
                   onMouseLeave={handleMouseLeave}
-                  className={`hover:text-gray-800 w-[96px] text-[1rem] text-[#28382B] z-10 `}
+                  className={`hover:text-gray-800 text-[1rem] text-[#28382B] z-10 `}
                 >
                   {navItem.name}
                 </button>
@@ -103,25 +104,27 @@ const Header = () => {
           </div>
           <div className="h-2">
             <motion.div
-              initial={{ x: 0 }}
+              initial={{ x: 10.9 }}
               animate={{ x: translateX }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="w-[96px] h-full grid place-items-center"
+              className="h-full grid place-items-center w-fit"
             >
               <GoDotFill size={20} className=" -translate-y-1 text-[#D6AB11]" />
             </motion.div>
           </div>
         </nav>
 
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden lg:flex space-x-4 xl:mr-[55px]">
           <Button>Book a tour</Button>
           <Button
             type="secondary"
-            className="hidden md:block lg:hidden 2xl:block"
+            className="hidden 1147px:block"
           >
             Explore Property
           </Button>
         </div>
+
+        <Button className="lg:hidden mr-[12px]">Menu</Button>
       </header>
     </>
   );

@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ["Effra Trial", "Inter", "sans-serif"],
       },
+      screens: {
+        "1147px": "1147px"
+      }
     },
   },
   daisyui: {
