@@ -26,8 +26,8 @@ const Featured = () => {
   return (
     <div className="mb-[3rem] sm:mb-[7.5rem] max-sm:pt-[3rem]">
       <div className="grid place-items-center pr-4 sm:pr-8">
-        <div className="text-center">
-          <h3 className="text-[#28382B] text-[1rem] text-xl font-[700]">
+        <div className="sm:text-center">
+          <h3 className="text-[#28382B] text-[1rem] sm:text-xl font-[700]">
             Green Features
           </h3>
           <h3 className="text-[2rem] sm:text-[3rem] font-[700] leading-snug">

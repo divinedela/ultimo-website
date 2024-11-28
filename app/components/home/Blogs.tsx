@@ -4,12 +4,14 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 const Blogs = () => {
   return (
-    <div className="container mx-auto  md:px-20 py-20 px-4">
+    <div className="mb-[3rem] sm:mb-[7.5rem] max-sm:pt-[3rem]">
       <div className="grid place-items-center">
-        <div className=" space-y-4 text-center">
+        <div className=" space-y-3 sm:text-center">
           <div>
-            <h3 className="text-[#28382B] text-xl font-[700]">Blog</h3>
-            <h3 className="text-[3rem] font-[700]">
+            <h3 className="text-[#28382B] text-[1rem] sm:text-xl font-[700]">
+              Blog
+            </h3>
+            <h3 className="text-[2rem] sm:text-[3rem] font-[700] leading-snug">
               <span className="text-[#348841] italic">Insights</span> that
               inspire.
             </h3>
@@ -52,22 +54,24 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
 }) => {
   return (
     <div className="rounded-[1.3rem] flex flex-col gap-[1rem] border-[0.5px] border-[#CFCFCF] overflow-hidden">
-      <Image
-        src={image}
-        priority
-        alt=""
-        width={1920}
-        height={252}
-        className="object-cover max-h-[16.25rem] rounded-xl"
-        layout="responsive"
-      />
+      <div className="max-h-[15.7rem] bg-slate-400 overflow-hidden">
+        <Image
+          src={image}
+          priority
+          alt=""
+          width={1920}
+          height={252}
+          className="object-cover size-full max-h-[15.7rem]"
+          layout="responsive"
+        />
+      </div>
       <div className="p-6 rounded-b-xl mt-[-1.6rem]">
-        <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
-          <p className="mb-2">3rd October, 2024</p>
+        <div className="text-sm text-[#5B6B5D] flex justify-between items-center mb-3">
+          <p className="">3rd October, 2024</p>
           <p>3 mins read</p>
         </div>
-        <h3 className="text-[#28382B] text-2xl font-[700] h-[4rem]">{title}</h3>
-        <button className="text-[#348841] text-[1rem] font-[700] flex gap-4 items-center mt-4">
+        <h3 className="text-[#28382B] text-xl sm:text-2xl font-[700] sm:min-h-[4rem]">{title}</h3>
+        <button className="text-[#348841] text-[1rem] font-[700] flex gap-[10px] items-center mt-6">
           <span>Read more</span>
           <IoArrowForwardCircleOutline className="shrink-0" size={28} />
         </button>
