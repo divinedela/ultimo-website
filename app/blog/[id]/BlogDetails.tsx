@@ -20,8 +20,8 @@ const BlogDetails: React.FC<BlogDetailsProps> = ({ id }) => {
   console.log("Blog ID:", id);
 
   return (
-    <div className="bg-white">
-      <div className="pb-[6rem] pt-[2rem] container mx-auto  md:px-20 px-4 grid grid-cols-1 lg:grid-cols-5 gap-[1.5rem] md:gap-[4rem]">
+    <div className="bg-white 2xl:max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[6rem] my-[3rem] sm:mb-[7.5rem]">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-[3rem] md:gap-[5rem]">
         <div className=" border-[#CFCFCF] flex flex-col gap-[1rem] lg:col-span-3">
           <Image
             src="/assets/img/Future_of_Green-Living.jpeg"
@@ -30,13 +30,13 @@ const BlogDetails: React.FC<BlogDetailsProps> = ({ id }) => {
             height={304}
             alt=""
             layout="responsive"
-            className=" max-h-[19rem] object-cover rounded-xl"
+            className=" max-h-[19rem] min-h-[18.7rem] object-cover rounded-xl"
           />
           <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
             <p>3rd October, 2024</p>
             <p>3 mins read</p>
           </div>
-          <h3 className="text-[#28382B] text-[2.25rem] font-[700]">
+          <h3 className="text-[#28382B] text-xl sm:text-[2.25rem] font-[700] leading-snug">
             Navigating the Current Real Estate Landscape: Tips for Buyers and
             Sellers
           </h3>
@@ -69,7 +69,7 @@ const BlogDetails: React.FC<BlogDetailsProps> = ({ id }) => {
         </div>
 
         <div className="lg:col-span-2  space-y-6">
-          <h3 className="text-[#28382B] text-xl font-[700]">Recommended</h3>
+          <h3 className="text-[#28382B] text-2xl sm:text-xl font-[700]">Recommended</h3>
 
           <CustomBlogCard
             image="/assets/img/Future_of_Green-Living.jpeg"

@@ -24,8 +24,8 @@ const Blogs: React.FC = () => {
   const FilterOptions = ["All", "Design", "Events", "Investing", "Trends"];
 
   return (
-    <div className="py-10 space-y-8">
-      <div className="flex items-center gap-3 py-1 flex-wrap">
+    <div className="pt-4 space-y-12 mb-[3rem] sm:mb-[7.5rem]">
+      <div className="flex items-center gap-3 py-1 overflow-x-auto no-scrollbar">
         {FilterOptions.map((option, i) => (
           <button
             key={i}
@@ -43,12 +43,12 @@ const Blogs: React.FC = () => {
           <input
             type="search"
             placeholder="Search"
-            className="text-[#5B6B5D] bg-transparent w-full focus:outline-none"
+            className="text-[#5B6B5D] bg-transparent min-w-[5rem] w-full focus:outline-none"
           />
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-[1.5rem] mt-[3rem]">
+      <div className="grid md:grid-cols-2 gap-[1.5rem]">
         <CustomBlogCard
           image="/assets/img/Future_of_Green-Living.jpeg"
           title="The Future of Green Living: Solar Power in Real Estate"
@@ -116,7 +116,7 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
       <h3 className="text-[#28382B] text-xl font-[700]">{title}</h3>
       <button
         onClick={onClick}
-        className="text-[#348841] text-[1rem] font-[700] flex gap-4 items-center mt-2"
+        className="text-[#348841] text-[1rem] font-[700] flex gap-[10px] items-center mt-2"
       >
         <span>Read more</span>
         <IoArrowForwardCircleOutline className="shrink-0" size={28} />

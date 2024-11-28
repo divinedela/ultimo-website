@@ -9,7 +9,7 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
   title,
 }) => {
   return (
-    <div className="rounded-[1rem] flex flex-col sm:flex-row gap-[1rem]">
+    <div className="rounded-[1rem] flex gap-[1rem]">
       <Image
         src={image}
         priority
@@ -17,7 +17,7 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
         height={64}
         alt=""
         layout="responsive"
-        className="max-h-[4rem] sm:max-w-[5.5rem] w-full object-cover rounded-lg"
+        className="max-h-[4rem] max-w-[5.5rem] w-full object-cover rounded-lg"
       />
       <div className="w-full flex flex-col justify-between">
         <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
