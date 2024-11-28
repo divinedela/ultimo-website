@@ -3,8 +3,8 @@ import React from "react";
 
 const Form = () => {
   return (
-    <div className="grid lg:grid-cols-2 gap-[3rem] pb-[2rem] lg:pb-[6.5rem] pt-[2rem] container mx-auto  md:px-20 px-4 h-fit">
-      <div className=" flex justify-end h-full">
+    <div className="grid lg:grid-cols-2 gap-[3rem] pb-[2rem] lg:pb-[6.5rem] h-fit">
+      <div className="hidden lg:flex justify-end h-full">
         <Image
           priority
           src="/assets/img/form-bg.jpeg"
@@ -16,8 +16,8 @@ const Form = () => {
         />
       </div>
       <div className=" space-y-2">
-        <h3 className="text-[#28382B] text-xl font-[700]">Contact Us</h3>
-        <h3 className="text-[3rem] font-[700] leading-tight">
+        <h3 className="text-[#28382B] text-[1rem] sm:text-xl font-[700]">Contact Us</h3>
+        <h3 className="text-[2rem] sm:text-[3rem] font-[700] leading-snug">
           Guiding your path to a{" "}
           <span className="text-[#348841] italic">new home</span>
         </h3>
@@ -49,7 +49,7 @@ const Form = () => {
             className="border-b-[1px] border-[#CFCFCF] w-full p-4 focus:outline-none"
           />
           <div className="flex items-center gap-3 py-1 flex-wrap">
-            <p className="font-semibold">Preferred Contact Method:</p>
+            <p className="font-semibold max-sm:w-full">Preferred Contact Method:</p>
             <button className="border-[1px] border-[#CFCFCF] p-1.5 px-3 rounded-lg text-inherit">
               Email
             </button>
@@ -64,7 +64,7 @@ const Form = () => {
             name="message"
             id="message"
             placeholder="Message"
-            className="border-[1px] border-[#CFCFCF] w-full p-4 focus:outline-none rounded-lg"
+            className="border-b-[1px] border-[#CFCFCF] w-full p-4 focus:outline-none"
           ></textarea>
           <div className="flex items-center gap-3 text-[#28382B]">
             <input
