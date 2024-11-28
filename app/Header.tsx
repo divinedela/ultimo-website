@@ -21,10 +21,10 @@ const Header = () => {
   const navList = [
     { name: "Home", link: "/", translate: 10.9 },
     { name: "The Project", link: "/project", translate: 104.2 },
-    { name: "About Us", link: "/about", translate: 204.6 },
-    { name: "Gallery", link: "/gallery", translate: 291.3 },
-    { name: "Blog", link: "/blog", translate: 357.1 },
-    { name: "Contact Us", link: "/contact", translate: 439.7 },
+    { name: "About Us", link: "/about", translate: 197.8 },
+    { name: "Gallery", link: "/gallery", translate: 278.9 },
+    { name: "Blog", link: "/blog", translate: 343.5 },
+    { name: "Contact Us", link: "/contact", translate: 427.8 },
   ];
 
   const isActive = (link: string) => {
@@ -94,7 +94,7 @@ const Header = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.2, ease: "easeInOut" }}
-                    className="text-[#D6AB11] absolute -bottom-4"
+                    className="text-[#D6AB11] absolute -bottom-3.5"
                   >
                     <GoDotFill size={20} />
                   </motion.p>
@@ -109,7 +109,10 @@ const Header = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
               className="h-full grid place-items-center w-fit"
             >
-              <GoDotFill size={20} className=" -translate-y-1 text-[#D6AB11]" />
+              <GoDotFill
+                size={20}
+                className=" -translate-y-1.5 text-[#D6AB11]"
+              />
             </motion.div>
           </div>
         </nav>

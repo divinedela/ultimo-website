@@ -16,7 +16,7 @@ export const DetailsCard: React.FC<DetailsCardProps> = ({
   return (
     <div className="space-y-4">
       <Image src={imageSrc || FlowerLotus} className="object-cover" alt="FlowerLotus" priority />
-      <h3 className="text-[2rem] font-[700] text-[#28382B]">{title}</h3>
+      <h3 className="text-[2rem] font-[700] text-[#28382B] leading-tight">{title}</h3>
       <p className="text-[1rem] text-[#5B6B5D] leading-relaxed">{children}</p>
     </div>
   );

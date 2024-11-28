@@ -10,10 +10,10 @@ const Footer = () => {
   const navList = [
     { name: "Home", link: "/", translate: 10.9 },
     { name: "The Project", link: "/project", translate: 104.2 },
-    { name: "About Us", link: "/about", translate: 204.6 },
+    { name: "About Us", link: "/about", translate: 197.8 },
     { name: "Sustainability", link: "#", translate: 10.9 },
-    { name: "Gallery", link: "/gallery", translate: 291.3 },
-    { name: "Blog", link: "/blog", translate: 357.1 },
+    { name: "Gallery", link: "/gallery", translate: 278.9 },
+    { name: "Blog", link: "/blog", translate: 343.5 },
   ];
 
   const links = [

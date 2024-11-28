@@ -1,16 +1,17 @@
-
 import { DetailsCard } from "../components/DetailsCard";
 import Hero from "./Hero";
-import FlowerLotus from "../../public/assets/icons/Windmill.png";
+import FlowerLotus from "../../public/assets/icons/FlowerLotus.png";
 import PenNibStraight from "../../public/assets/icons/PenNibStraight.png";
 import Windmill from "../../public/assets/icons/Windmill.png";
 
 const AboutPage = () => {
   return (
-    <div className="bg-white">
-      <Hero />
-      <div className="container mx-auto  md:px-20 py-20 px-4">
-        <div className="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3 md:gap-[1.5rem] mt-[3rem]">
+    <div className="bg-white 2xl:max-w-[1440px] mx-auto">
+      <div className="lg:px-8">
+        <Hero />
+      </div>
+      <div className="px-4 sm:px-8 lg:px-[6rem] mb-[3rem] sm:mb-[7.5rem]">
+        <div className="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3">
           <DetailsCard
             imageSrc={Windmill}
             title="Crafted for a sustainable lifestyle"
