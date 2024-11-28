@@ -41,7 +41,7 @@ const Featured = () => {
         <motion.div
           ref={ref}
           id="features-progress"
-          className="flex gap-[1.5rem] mt-[3rem] overflow-auto no-scrollbar"
+          className="flex gap-[1.5rem] mt-[3rem] overflow-auto no-scrollbar mr-[1.5rem]"
         >
           <CustomImageCard
             span="Solar power generation"
