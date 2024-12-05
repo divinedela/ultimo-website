@@ -8,11 +8,11 @@ interface CustomImageCardProps {
 }
 
 const CustomImg = ({ src, className, alt = "" }: CustomImageCardProps) => {
-  const production = true;
+  const netlifyProduction = false;
 
   return (
     <>
-      {production ? (
+      {netlifyProduction ? (
         <img src={src} alt="" className={` ${className}`} />
       ) : (
         <Image
