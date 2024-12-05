@@ -1,10 +1,10 @@
 "use client";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+import CustomImg from "./components/CustomImg";
 
 const Footer = () => {
   const navList = [
@@ -30,12 +30,8 @@ const Footer = () => {
 
   return (
     <footer className="2xl:max-w-[1440px] mx-auto pt-6 pb-[57px] md:px-8 px-4 space-y-4 flex flex-col">
-      <Image
-        priority
-        width={213}
-        height={48}
+      <CustomImg
         className="max-w-[213px] xl:ml-[5rem] mt-4 lg:mt-0 order-1 lg:order-none"
-        layout="responsive"
         src="/assets/img/ultimo_logo.png"
         alt="logo"
       />

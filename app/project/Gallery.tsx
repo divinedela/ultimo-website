@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React, { useRef, useState } from "react";
 import {
   TfiAlignRight,
@@ -10,6 +9,7 @@ import {
 } from "react-icons/tfi";
 import { BsArrowsAngleExpand } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
+import CustomImg from "../components/CustomImg";
 console.log(TfiAlignRight);
 
 const Gallery = () => {
@@ -67,13 +67,9 @@ const Gallery = () => {
             }}
           >
             <div className="w-full h-full z-10 absolute top-0 left-0 group-hover:bg-black/40 transition-all duration-200" />
-            <Image
+            <CustomImg
               src={image}
-              priority
               alt="Ultimo Gardens"
-              width={1000}
-              height={320}
-              layout="responsive"
               className="w-full min-h-[20rem] max-h-[20rem] object-cover group-hover:scale-110 delay-100 transition-all duration-1000 ease-out"
             />
           </div>
@@ -110,12 +106,8 @@ const Gallery = () => {
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className="absolute inset-0 flex justify-center"
                 >
-                  <Image
-                    priority
+                  <CustomImg
                     src={images[index]}
-                    width={1000}
-                    height={1500}
-                    layout="responsive"
                     alt="Ultimo Gardens"
                     className="object-cover"
                   />

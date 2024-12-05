@@ -1,11 +1,11 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { motion } from "framer-motion";
 import Button from "./components/Button";
+import CustomImg from "./components/CustomImg";
 
 const Header = () => {
   const currentPath = usePathname();
@@ -53,12 +53,8 @@ const Header = () => {
       <header className="flex justify-between items-center py-2 bg-white/30 backdrop-blur-md rounded-xl md:rounded-[3rem]">
         <div className="flex items-center space-x-2 xl:ml-[55px] max-sm:ml-[12px]">
           <Link href="/">
-            <Image
-              priority
-              width={213}
-              height={48}
-              className="max-[141px] sm:max-w-[213px] min-h-[32px] sm:min-h-[48px]"
-              layout="responsive"
+            <CustomImg
+              className="max-w-[141px] sm:max-w-[213px] min-h-[32px] sm:min-h-[48px]"
               src="/assets/img/ultimo_logo.png"
               alt="logo"
             />

@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import { CustomBlogCard } from "./CustomBlogCard";
+import CustomImg from "@/app/components/CustomImg";
 
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   // Replace this with real data fetching or mock data
@@ -23,13 +23,8 @@ const BlogDetails: React.FC<BlogDetailsProps> = ({ id }) => {
     <div className="bg-white 2xl:max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[6rem] my-[3rem] sm:mb-[7.5rem]">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-[3rem] md:gap-[5rem]">
         <div className=" border-[#CFCFCF] flex flex-col gap-[1rem] lg:col-span-3">
-          <Image
+          <CustomImg
             src="/assets/img/Future_of_Green-Living.jpeg"
-            priority
-            width={1000}
-            height={304}
-            alt=""
-            layout="responsive"
             className=" max-h-[19rem] min-h-[18.7rem] object-cover rounded-xl"
           />
           <div className="text-sm text-[#5B6B5D] flex justify-between items-center">
@@ -69,7 +64,9 @@ const BlogDetails: React.FC<BlogDetailsProps> = ({ id }) => {
         </div>
 
         <div className="lg:col-span-2  space-y-6">
-          <h3 className="text-[#28382B] text-2xl sm:text-xl font-[700]">Recommended</h3>
+          <h3 className="text-[#28382B] text-2xl sm:text-xl font-[700]">
+            Recommended
+          </h3>
 
           <CustomBlogCard
             image="/assets/img/Future_of_Green-Living.jpeg"

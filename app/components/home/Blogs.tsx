@@ -1,6 +1,6 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import CustomImg from "../CustomImg";
 
 const Blogs = () => {
   return (
@@ -46,7 +46,7 @@ export default Blogs;
 
 interface CustomBlogCardProps {
   title: string;
-  image: string | StaticImageData;
+  image: string;
 }
 export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
   image,
@@ -55,14 +55,9 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
   return (
     <div className="rounded-[1.3rem] flex flex-col gap-[1rem] border-[0.5px] border-[#CFCFCF] overflow-hidden">
       <div className="max-h-[15.7rem] bg-slate-400 overflow-hidden">
-        <Image
+        <CustomImg
           src={image}
-          priority
-          alt=""
-          width={1920}
-          height={252}
           className="object-cover size-full max-h-[15.7rem]"
-          layout="responsive"
         />
       </div>
       <div className="p-6 rounded-b-xl mt-[-1.6rem]">
@@ -70,7 +65,9 @@ export const CustomBlogCard: React.FC<CustomBlogCardProps> = ({
           <p className="">3rd October, 2024</p>
           <p>3 mins read</p>
         </div>
-        <h3 className="text-[#28382B] text-xl sm:text-2xl font-[700] sm:min-h-[4rem]">{title}</h3>
+        <h3 className="text-[#28382B] text-xl sm:text-2xl font-[700] sm:min-h-[4rem]">
+          {title}
+        </h3>
         <button className="text-[#348841] text-[1rem] font-[700] flex gap-[10px] items-center mt-6">
           <span>Read more</span>
           <IoArrowForwardCircleOutline className="shrink-0" size={28} />

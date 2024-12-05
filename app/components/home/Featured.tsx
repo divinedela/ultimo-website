@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
-import Image, { StaticImageData } from "next/image";
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 import useHorizontalScrollPercentage from "../hooks/useHorizontalScrollPercentage";
+import CustomImg from "../CustomImg";
 
 const Featured = () => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -20,7 +20,7 @@ const Featured = () => {
     setPercent(latest)
   );
 
-  const { scrollPercentage, scrollToPercentage } =
+  const { scrollToPercentage } =
     useHorizontalScrollPercentage("features-progress");
 
   return (
@@ -94,7 +94,7 @@ export default Featured;
 interface CustomImageCardProps {
   description?: string;
   span?: string;
-  image: string | StaticImageData;
+  image: string;
   imageClassName?: string;
 }
 export const CustomImageCard: React.FC<CustomImageCardProps> = ({
@@ -107,17 +107,12 @@ export const CustomImageCard: React.FC<CustomImageCardProps> = ({
     <div
       className={`bg-white rounded-[1.3rem] flex flex-col gap-[1rem] max-lg:min-w-[20rem]`}
     >
-      <Image
-        priority
+      <CustomImg
         src={image}
-        width={1000}
-        height={500}
-        alt=""
-        layout="responsive"
         className={`min-h-[31.25rem] object-cover rounded-xl ${imageClassName}`}
       />
       <p className="text-[#5B6B5D] text-[1rem] sm:text-xl">
-        <span className="font-[600] text-[#28382B] text-inherit">{span}</span>{" "}
+        <span className="font-[600] text-[#28382B] text-inherit">{span}</span>
         {description}
       </p>
     </div>

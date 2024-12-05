@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React from "react";
 import { TbPhoneCall } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
 import Form from "./Form";
+import CustomImg from "../components/CustomImg";
 
 const Schedule = () => {
   return (
@@ -24,14 +24,9 @@ const Schedule = () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div className="grid sm:grid-cols-2 pt-[2rem]">
-              <Image
-                priority
+              <CustomImg
                 src="/assets/img/profile-woman.png"
-                width={1000}
-                height={1000}
-                layout="responsive"
                 className="object-cover"
-                alt=""
               />
               <div className="flex flex-col gap-2 justify-center p-[2rem]">
                 <h3 className="text-[1.8rem] font-normal">Allison Rivers</h3>
