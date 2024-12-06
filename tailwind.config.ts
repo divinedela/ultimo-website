@@ -13,7 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sans: ["Effra Trial", "Inter", "sans-serif"],
+        sans: ["Effra", "Inter", "sans-serif"],
       },
     },
   },

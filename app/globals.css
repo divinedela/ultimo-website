@@ -4,16 +4,29 @@
 
 @font-face {
   font-family: "Effra";
-  src: url("/fonts/Effra_Trial_Rg.woff") format("woff");
+  src: url("./fonts/Effra_Std_Bd.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Effra";
+  src: url("./fonts/Effra_Std_Rg.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Effra";
-  src: url("/fonts/Effra_Trial_Bd.woff") format("woff");
-  font-weight: 700;
+  src: url("./fonts/Effra_Std_Md.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
+}
+
+body {
+  font-family: "Effra", sans-serif;
+  font-weight: 400;
+  background-color: #f3f3f3;
 }
 
 h1 {
@@ -58,7 +71,6 @@ p {
     transform: rotate(360deg);
   }
 }
-
 
 @layer utilities {
   /* Chrome, Safari and Opera */
