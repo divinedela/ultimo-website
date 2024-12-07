@@ -9,11 +9,11 @@ import CustomImg from "./components/CustomImg";
 const Footer = () => {
   const navList = [
     { name: "Home", link: "/", translate: 10.9 },
-    { name: "The Project", link: "/project", translate: 104.2 },
-    { name: "About Us", link: "/about", translate: 197.8 },
-    { name: "Sustainability", link: "#", translate: 10.9 },
-    { name: "Gallery", link: "/gallery", translate: 278.9 },
-    { name: "Blog", link: "/blog", translate: 343.5 },
+    { name: "The Project", link: "/project", translate: 96.9 },
+    { name: "About Us", link: "/about", translate: 192.1 },
+    { name: "Sustainability", link: "/contact", translate: 413.8 },
+    { name: "Gallery", link: "/gallery", translate: 271.5 },
+    { name: "Blog", link: "/blog", translate: 335.8 },
   ];
 
   const links = [
