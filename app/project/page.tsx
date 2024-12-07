@@ -7,18 +7,21 @@ import Amenities from "./Amenities";
 import Gallery from "./Gallery";
 import Schedule from "./Schedule";
 
-
 const ProjectPage = () => {
   return (
     <div className="bg-white">
-      <Hero />
-      <div className="pb-[2rem] pt-[2rem] container mx-auto  md:px-10 px-4">
-        <Residences />
+      <div className="2xl:max-w-[1440px] mx-auto bg-white">
+        <Hero />
+        <div className="px-4 sm:px-8 lg:px-[6rem] mt-[3rem] md:mt-[7.5rem]">
+          <Residences />
+          <Experience />
+          <Amenities />
+        </div>
       </div>
-      <Experience />
-      <Amenities />
       <Gallery />
-      <Video />
+      <div className="2xl:max-w-[1440px] mx-auto bg-white">
+        <Video />
+      </div>
       <Schedule />
     </div>
   );

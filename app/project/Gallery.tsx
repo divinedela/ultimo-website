@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from "react";
 import {
-  TfiAlignRight,
   TfiAngleLeft,
   TfiAngleRight,
   TfiClose,
@@ -10,7 +9,6 @@ import {
 import { BsArrowsAngleExpand } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
 import CustomImg from "../components/CustomImg";
-console.log(TfiAlignRight);
 
 const Gallery = () => {
   const [index, setIndex] = useState(0);
@@ -49,7 +47,7 @@ const Gallery = () => {
 
   return (
     <div className=" py-[6rem] bg-[rgb(240,_240,_240)] ">
-      <h1 className=" text-[3rem] tracking-[0.3em] text-center">
+      <h1 className="text-[2rem] sm:text-[3rem] tracking-[0.3em] text-center">
         AN EXCLUSIVE RESIDENCE
       </h1>
       <p className="text-[1rem] leading-relaxed text-center tracking-[0.4em]">
@@ -79,9 +77,9 @@ const Gallery = () => {
       {isOpen && (
         <div
           ref={containerRef}
-          className="fixed inset-0 bg-slate-50 z-20 p-[2rem] flex flex-col"
+          className="fixed inset-0 bg-slate-50 z-30 p-[2rem] flex flex-col"
         >
-          <div className="flex justify-between items-center text-2xl">
+          <div className="flex justify-between items-center text-2xl lg:translate-y-14 2xl:translate-y-0">
             <BsArrowsAngleExpand
               onClick={handleFullscreen}
               className="cursor-pointer hidden sm:block"

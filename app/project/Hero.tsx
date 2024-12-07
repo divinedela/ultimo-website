@@ -1,94 +1,41 @@
-"use client";
-
 import React from "react";
-import Button from "../components/Button";
-import { motion } from "framer-motion";
-import Link from "next/link";
 
 const Hero = () => {
-  const headingWords = "LUXURY LIVING".replaceAll(" ", "-").split("");
-
   return (
-    <div className="my-[1rem]">
-      <div
-        className="bg-no-repeat bg-center bg-cover h-full overflow-hidden relative min-h-[30rem] sm:min-h-[40rem] lg:h-[85vh] grid place-items-center"
-        style={{
-          backgroundImage: `url('/assets/img/project-bg2.png')`,
-        }}
-      >
-        <div className="w-full h-full absolute top-0 left-0 bg-black/60" />
-
-        <div className="z-10 text-white p-[2rem] flex items-center flex-col">
-          <div className="hidden md:flex gap-5 gap-y-0">
-            {headingWords.map((word, index) => (
-              <CustomHeading
-                key={index}
-                delay={index * 0.1}
-                className={`text-[4rem] md:text-[6rem] text-center leading-[1] lg:leading-normal ${
-                  word === "-" && "text-transparent"
-                }`}
-              >
-                {word} {index === 3 && <br className="hidden md:block" />}{" "}
-              </CustomHeading>
-            ))}
-          </div>
-          <h1 className="text-[4rem] md:text-[6rem] tracking-[0.3em] text-center leading-[1] lg:leading-normal lg:hidden">
-            LUXURY LIVING
-          </h1>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
-            className=" flex items-center flex-col"
-          >
-            <h2 className="text-[1rem] font-[500] tracking-[0.4em] text-center">
-              PRIVATE DOWNTOWN LIVING IN CHARLOTTE, NC
-            </h2>
-            <div className="hidden md:flex space-x-1 mt-[3rem] w-full justify-center">
-              <Button className="rounded-none font-normal text-sm w-full max-w-[15rem] py-3">
-                <Link href="#schedule">SCHEDULE A SHOWING</Link>
-              </Button>
-              <Button
-                className="rounded-none  font-normal text-sm w-full max-w-[15rem] py-3"
-                type="secondary"
-              >
-                <Link href="#experience">DISCOVER MORE</Link>
-              </Button>
-            </div>
-          </motion.div>
+    <div className="px-0 sm:px-8 lg:px-[6rem] mt-[3rem]">
+      <div className="max-sm:px-4 flex flex-col lg:flex-row justify-between gap-[1rem]">
+        <div>
+          <h3 className="text-[#28382B] text-[1rem] sm:text-xl font-[700]">
+            The Project
+          </h3>
+          <h3 className="text-[2rem] sm:text-[3rem] font-[700] leading-snug">
+            <span className="text-[#348841] italic">Green luxury</span>{" "}
+            redefined.
+          </h3>
         </div>
+        <p className="text-[1rem] text-[#5B6B5D] leading-relaxed lg:max-w-[33rem]">
+          Ultimo Gardens offers a peaceful retreat in Accra&apos;s prime Airport
+          Residential Area, blending luxurious interiors with private rooftop
+          terraces and lush outdoor spaces—all just minutes from the city&apos;s
+          best dining, recreation, and healthcare.{" "}
+          <br className="hidden md:block" />
+          Experience eco-friendly living without compromising on luxury.
+        </p>
+      </div>
+
+      <div className="md:h-[27rem] max-sm:h-[29rem] overflow-hidden relative mt-[2.25rem] lg:rounded-[3rem]">
+        <video
+          autoPlay
+          muted
+          className="w-full md:absolute top-1/2 md:-translate-y-1/2 max-sm:h-full max-sm:object-cover"
+          loop
+        >
+          <source src="/assets/video/hero_video.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
       </div>
     </div>
   );
 };
 
 export default Hero;
-
-interface CustomHeadingProps {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-  duration?: number;
-}
-export const CustomHeading: React.FC<CustomHeadingProps> = ({
-  children,
-  delay,
-  className,
-  duration = 0,
-}) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        duration: duration,
-        ease: "easeInOut",
-        delay: delay || 0.2,
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
