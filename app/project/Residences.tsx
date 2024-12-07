@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
 import CustomImg from "../components/CustomImg";
 
 const Residences = () => {

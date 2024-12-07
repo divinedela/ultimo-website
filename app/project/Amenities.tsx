@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { FaCarRear } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import CustomImg from "../components/CustomImg";
 
@@ -46,14 +45,14 @@ export default Amenities;
 interface AmenitiesProps {
   type?: string;
   title: string;
-  children?: React.ReactNode;
+  // children?: React.ReactNode;
   src: string;
 }
 
 export const AmenitiesCard: React.FC<AmenitiesProps> = ({
   type = "primary",
   title,
-  children,
+  // children,
   src,
 }) => {
   return (
