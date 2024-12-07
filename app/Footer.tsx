@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="2xl:max-w-[1440px] mx-auto pt-6 pb-[57px] md:px-8 px-4 space-y-4 flex flex-col">
+    <footer id="footer" className="2xl:max-w-[1440px] mx-auto pt-6 pb-[57px] md:px-8 px-4 space-y-4 flex flex-col">
       <CustomImg
         className="max-w-[213px] xl:ml-[5rem] mt-4 lg:mt-0 order-1 lg:order-none"
         src="/assets/img/ultimo_logo.png"

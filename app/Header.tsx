@@ -120,7 +120,7 @@ const Header = () => {
           </Button>
         </div>
 
-        <Button className="lg:hidden mr-[12px]">Menu</Button>
+        <Button className="lg:hidden mr-[12px]"><a href="#footer">Menu</a></Button>
       </header>
     </div>
   );
