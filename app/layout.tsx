@@ -18,7 +18,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 
   return (
     <html lang="en">
-      <body className={`font-effra bg-white`}>
+      <body className={`font-effra bg-white  overflow-x-hidden`}>
         <Header />
         <ClientWrapper>{children}</ClientWrapper>
         <Footer />

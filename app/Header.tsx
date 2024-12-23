@@ -12,6 +12,7 @@ const Header = () => {
   const router = useRouter();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [translateX, setTranslateX] = useState(10.9);
+  const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     const storedTranslateX = sessionStorage.getItem("translateX");
@@ -50,7 +51,7 @@ const Header = () => {
   return (
     <div className="px-4 sm:px-8 2xl:max-w-[1440px] mx-auto sticky top-2 z-20">
       {/* {loading && <Loading />} */}
-      <header className="flex justify-between items-center py-2 bg-white/30 backdrop-blur-md rounded-xl md:rounded-[3rem]">
+      <header className="flex justify-between items-center py-2 bg-white/30 backdrop-blur-md rounded-xl md:rounded-[3rem] z-10 relative">
         <div className="flex items-center space-x-2 xl:ml-[55px] max-sm:ml-[12px]">
           <Link href="/">
             <CustomImg
@@ -120,8 +121,48 @@ const Header = () => {
           </Button>
         </div>
 
-        <Button className="lg:hidden mr-[12px]"><a href="#footer">Menu</a></Button>
+        <Button
+          onClick={() => setShowNav(!showNav)}
+          className="lg:hidden mr-[12px]"
+        >
+          Menu
+        </Button>
       </header>
+
+      <motion.div
+        initial={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
+        animate={{
+          clipPath: showNav
+            ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+            : "polygon(0 0, 0 0, 0 100%, 0 100%)",
+        }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        onClick={() => setShowNav(!showNav)}
+        className="lg:hidden fixed h-screen top-0 right-1/2 translate-x-1/2 w-[120%] bg-white"
+      >
+        <div className="flex flex-col gap-6 mt-[6rem]">
+          {navList.map((navItem, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut", delay: i * 0.2 }}
+              key={i}
+              className="flex flex-col items-center group relative"
+            >
+              <button
+                onClick={() => {
+                  handleClick(navItem.link);
+                  setTranslateX(navItem.translate);
+                  sessionStorage.setItem("translateX", `${navItem.translate}`);
+                }}
+                className={`hover:text-gray-800 text-[1rem] text-[#28382B] z-10 `}
+              >
+                {navItem.name}
+              </button>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };
